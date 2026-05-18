@@ -150,10 +150,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:9000;height:64px;padding:0 5%;di
 .ph-card-item::before{content:"✦";color:var(--gold);font-size:8px;}
 
 /* TIMELINE */
-.tl{position:relative;padding-left:22px;}
+.tl{position:relative;padding-left:22px;overflow:hidden;}
 .tl::before{content:"";position:absolute;left:4px;top:6px;bottom:30px;width:1px;background:var(--bl);}
-.ei{position:relative;margin-bottom:14px;}
-.edot{position:absolute;left:-22px;top:13px;width:9px;height:9px;border-radius:50%;background:#FAF8F4;border:2px solid var(--gold);}
+.ei{position:relative;margin-bottom:14px;opacity:1!important;transform:none!important;}
+.edot{position:absolute;left:-20px;top:13px;width:9px;height:9px;border-radius:50%;background:#FAF8F4;border:2px solid var(--gold);}
 .ei.cur .edot{background:var(--gold);}
 .ec{background:var(--glass);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--glb);border-radius:14px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.04);}
 .ec:hover{box-shadow:0 6px 24px rgba(0,0,0,0.08);}
@@ -413,7 +413,7 @@ var cio=new IntersectionObserver(function(ee){ee.forEach(function(e){if(e.isInte
 document.querySelectorAll('[data-count]:not([data-onload])').forEach(function(el){cio.observe(el);});
 
 // Reveal
-var rio=new IntersectionObserver(function(ee){ee.forEach(function(e){if(!e.isIntersecting)return;var el=e.target;el.classList.add('in');var kids=el.querySelectorAll('.skc,.rc,.wc,.sr,.oc,.ei,.tc,.ait,.didc,.resc,.learni,.ccard,.openi');kids.forEach(function(k,i){k.style.opacity='0';k.style.transform='translateY(13px)';k.style.transition='opacity .42s ease '+(i*.06)+'s,transform .42s ease '+(i*.06)+'s';setTimeout(function(){k.style.opacity='1';k.style.transform='none';},45+i*55);});rio.unobserve(el);});},{threshold:0.06,rootMargin:'0px 0px -20px 0px'});
+var rio=new IntersectionObserver(function(ee){ee.forEach(function(e){if(!e.isIntersecting)return;var el=e.target;el.classList.add('in');var kids=el.querySelectorAll('.skc,.rc,.wc,.sr,.oc,.tc,.ait,.didc,.resc,.learni,.ccard,.openi');kids.forEach(function(k,i){k.style.opacity='0';k.style.transform='translateY(13px)';k.style.transition='opacity .42s ease '+(i*.06)+'s,transform .42s ease '+(i*.06)+'s';setTimeout(function(){k.style.opacity='1';k.style.transform='none';},45+i*55);});rio.unobserve(el);});},{threshold:0.06,rootMargin:'0px 0px -20px 0px'});
 document.querySelectorAll('.reveal').forEach(function(el){rio.observe(el);});
 
 // Accordion
