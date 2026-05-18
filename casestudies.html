@@ -328,72 +328,82 @@ footer span{color:var(--gold);}
   .csec p{font-size:13px!important;}
 }
 
-/* ── GLOBAL MOBILE ── */
+
+/* ═══ MOBILE FINAL OVERRIDE ═══ */
 @media(max-width:768px){
-  body{text-align:left;}
   .nav-links{display:none!important;}
   .ham{display:flex!important;}
+  body{text-align:left!important;}
 
-  /* PAGE HERO */
-  .ph{padding:86px 4% 36px!important;}
-  .ph-inner{grid-template-columns:1fr!important;gap:24px!important;}
-  .ph-cards{display:none!important;}
-  .ph h1{font-size:28px!important;letter-spacing:-0.5px!important;}
-  .ph p{font-size:14px!important;}
+  /* TYPOGRAPHY - left aligned everywhere */
+  p,li,.at p,.csec p,.learntxt,.hero-sub,.cdesc,.ph p,.ssub{text-align:left!important;}
 
-  /* SECTIONS */
-  .sec{padding:48px 4%!important;}
-  .sec-inner{padding:0!important;}
-
-  /* HERO HOME */
-  .hero{grid-template-columns:1fr!important;padding:80px 4% 48px!important;min-height:auto!important;gap:32px!important;}
-  .hero h1{font-size:36px!important;letter-spacing:-1px!important;}
+  /* HOME HERO */
+  .hero{grid-template-columns:1fr!important;padding:80px 4% 48px!important;min-height:auto!important;gap:28px!important;align-items:flex-start!important;}
+  .hero h1{font-size:34px!important;letter-spacing:-1px!important;}
   .hero-sub{font-size:14px!important;}
   .photo-wrap{display:none!important;}
-  .hstats{gap:20px!important;flex-wrap:wrap!important;}
-  .hn{font-size:24px!important;}
+  .hstats{gap:16px!important;}
+  .hn{font-size:22px!important;}
   .hbtns{flex-direction:column!important;}
   .btn{width:100%!important;justify-content:center!important;}
 
-  /* ABOUT GRID */
-  .ag{grid-template-columns:1fr!important;gap:32px!important;}
+  /* PAGE HERO */
+  .ph{padding:86px 4% 32px!important;}
+  .ph-inner{grid-template-columns:1fr!important;}
+  .ph-cards{display:none!important;}
+  .ph h1{font-size:26px!important;letter-spacing:-0.5px!important;}
+  .ph p{font-size:14px!important;}
+  .ph-left{max-width:100%!important;}
+
+  /* SECTIONS */
+  .sec{padding:44px 4%!important;}
+
+  /* ABOUT */
+  .ag{grid-template-columns:1fr!important;gap:28px!important;}
 
   /* SKILLS */
   .skg{grid-template-columns:1fr 1fr!important;gap:10px!important;}
   .skc{padding:16px!important;}
-  .skn{font-size:14px!important;}
-  .skt{font-size:11px!important;}
 
   /* READING */
   .rg{grid-template-columns:1fr!important;gap:12px!important;}
 
-  /* WORK */
-  .wg{grid-template-columns:1fr!important;gap:16px!important;}
+  /* WORK CARDS */
+  .wg{grid-template-columns:1fr!important;gap:14px!important;}
 
   /* CASE STUDIES */
-  .cbanner{padding:20px 16px!important;}
-  .banner-top{flex-direction:row!important;gap:12px!important;align-items:flex-start!important;}
-  .logo-right{width:64px!important;height:64px!important;flex-shrink:0!important;}
-  .ctitle{font-size:17px!important;line-height:1.3!important;margin-bottom:8px!important;font-weight:400!important;}
+  .cbanner{padding:18px 16px!important;}
+  .banner-top{flex-direction:row!important;gap:10px!important;align-items:flex-start!important;}
+  .logo-right{width:60px!important;height:60px!important;flex-shrink:0!important;}
+  .ctitle{font-size:16px!important;line-height:1.3!important;margin-bottom:8px!important;font-weight:400!important;}
   .cdesc{font-size:13px!important;line-height:1.6!important;}
-  .cmets{flex-wrap:wrap!important;gap:0!important;margin-top:14px!important;padding-top:14px!important;}
-  .cmet{min-width:45%!important;margin-bottom:10px!important;}
-  .cmetn{font-size:22px!important;}
+  .cmets{flex-wrap:wrap!important;margin-top:14px!important;padding-top:12px!important;}
+  .cmet{min-width:48%!important;margin-bottom:10px!important;padding-right:8px!important;}
+  .cmetn{font-size:20px!important;}
   .cmetl{font-size:11px!important;}
   .cbody{padding:16px!important;}
   .csect{font-size:16px!important;}
   .csec p{font-size:13px!important;line-height:1.7!important;}
   .didg{grid-template-columns:1fr!important;}
   .resg{grid-template-columns:1fr 1fr!important;}
-  .ctacta{padding:28px 20px!important;}
+  .ctacta{padding:26px 18px!important;}
   .ctacta h3{font-size:20px!important;}
 
-  /* TIMELINE */
-  .tl-wrap{padding-left:20px!important;}
+  /* TIMELINE (old pages) */
+  .tl{padding-left:20px!important;}
+  .eh{padding:14px 14px!important;}
+  .er{font-size:16px!important;}
+  .eb{padding:14px 14px!important;}
+  .ebul li{font-size:12px!important;line-height:1.7!important;}
+  .og{grid-template-columns:1fr!important;}
+
+  /* TIMELINE (experience new page) */
   .tl-section{padding:28px 4% 40px!important;}
-  .job-header{padding:14px 14px!important;}
+  .tl-wrap{padding-left:20px!important;}
+  .job-header{padding:14px!important;}
   .job-title{font-size:16px!important;}
-  .job-body{padding:14px 14px!important;}
+  .job-body{padding:14px!important;}
   .job-bullets li{font-size:12px!important;line-height:1.7!important;}
   .other-grid{grid-template-columns:1fr!important;}
   .other-section{padding:28px 4% 40px!important;}
@@ -402,28 +412,18 @@ footer span{color:var(--gold);}
   .edug{grid-template-columns:1fr!important;gap:12px!important;}
   .tg{grid-template-columns:1fr 1fr!important;gap:9px!important;}
   .aig{grid-template-columns:1fr 1fr!important;gap:8px!important;}
-  .ais{padding:24px 18px!important;}
+  .ais{padding:22px 16px!important;}
 
   /* CONTACT */
-  .cog{grid-template-columns:1fr!important;gap:28px!important;}
+  .cog{grid-template-columns:1fr!important;gap:24px!important;}
   .frow{grid-template-columns:1fr!important;}
-  .ph-left{max-width:100%!important;}
-
-  /* TYPOGRAPHY - justified */
-  .at p{text-align:justify!important;}
-  .hero-sub{text-align:left!important;}
-  .csec p{text-align:justify!important;}
-  .cdesc{text-align:left!important;}
-  .ph p{text-align:left!important;}
-  .learntxt{text-align:justify!important;}
 }
 
 @media(max-width:400px){
   .skg{grid-template-columns:1fr!important;}
-  .aig{grid-template-columns:1fr!important;}
-  .tg{grid-template-columns:1fr!important;}
-  .ctitle{font-size:15px!important;}
-  .cmetn{font-size:18px!important;}
+  .tg{grid-template-columns:1fr 1fr!important;}
+  .aig{grid-template-columns:1fr 1fr!important;}
+  .ctitle{font-size:14px!important;}
 }
 
 </style>
