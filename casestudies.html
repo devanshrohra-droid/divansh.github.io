@@ -273,9 +273,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:9000;height:64px;padding:0 5%;di
 .learntxt strong{color:var(--ink);}
 .toolpills{display:flex;flex-wrap:wrap;gap:6px;}
 .toolpill{font-size:12px;font-weight:500;padding:4px 11px;border-radius:20px;background:var(--gl);color:var(--gold);border:1px solid var(--gb);}
-.ctacta{background:rgba(15,15,15,0.88);backdrop-filter:blur(20px);border-radius:14px;padding:36px;text-align:center;margin-top:26px;border:1px solid rgba(255,255,255,0.1);box-shadow:0 6px 26px rgba(0,0,0,0.13);}
-.ctacta h3{font-family:"DM Serif Display",serif;font-size:22px;color:var(--white);margin-bottom:9px;}
-.ctacta p{font-size:14px;color:rgba(255,255,255,.5);margin-bottom:20px;}
+.ctacta{position:relative;}
+.ctacta::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:60%;height:1px;background:linear-gradient(90deg,transparent,rgba(184,150,46,0.7),transparent);border-radius:1px;}
+.ctacta-old{background:linear-gradient(145deg,#181818,#0A0A0A);border-radius:18px;padding:44px 32px;text-align:center;margin-top:26px;border:1px solid rgba(184,150,46,0.4);box-shadow:0 0 60px rgba(184,150,46,0.15),0 10px 40px rgba(0,0,0,0.4),inset 0 1px 0 rgba(184,150,46,0.2);}
+.ctacta h3{font-family:"DM Serif Display",serif;font-size:28px;color:#FFFFFF;margin-bottom:12px;font-weight:400;line-height:1.2;}
+.ctacta p{font-size:15px;color:rgba(255,255,255,0.65);margin-bottom:24px;line-height:1.7;max-width:400px;margin-left:auto;margin-right:auto;}
 
 /* FOOTER */
 footer{background:var(--dark);padding:32px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
@@ -385,8 +387,10 @@ footer span{color:var(--gold);}
   .csec p{font-size:13px!important;line-height:1.7!important;}
   .didg{grid-template-columns:1fr!important;}
   .resg{grid-template-columns:1fr 1fr!important;}
-  .ctacta{padding:26px 18px!important;}
-  .ctacta h3{font-size:20px!important;}
+  .ctacta{position:relative;}
+.ctacta::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:60%;height:1px;background:linear-gradient(90deg,transparent,rgba(184,150,46,0.7),transparent);border-radius:1px;}
+.ctacta-old{padding:26px 18px!important;}
+  .ctacta h3{font-family:"DM Serif Display",serif;font-size:28px;color:#FFFFFF;margin-bottom:12px;font-weight:400;line-height:1.2;}
 
   /* TIMELINE (old pages) */
   .tl{padding-left:20px!important;}
@@ -429,6 +433,22 @@ footer span{color:var(--gold);}
   .nav-links{display:flex!important;}
   .ham{display:none!important;}
   .mob{display:none!important;}
+}
+
+/* Left align fix - no justify anywhere */
+* { text-align: left !important; }
+.ctacta, .cta-bg, .cta-box { text-align: center !important; }
+footer { text-align: left !important; }
+.resc { text-align: center !important; }
+</style>
+<style>
+@media(max-width:768px){
+  .nav-links{display:none!important;}
+  .ham{display:flex!important;}
+}
+@media(min-width:769px){
+  .nav-links{display:flex!important;}
+  .ham{display:none!important;}
 }
 </style>
 </head>
@@ -613,6 +633,20 @@ window.sub=function(e){
     if(ok){ok.style.display='block';ok.textContent='Message received! I\'ll get back to you soon.';}
   });
 };
+
+// Animation fallback - force all reveal items visible after 800ms
+setTimeout(function(){
+  document.querySelectorAll('.reveal').forEach(function(el){
+    el.style.opacity='1';
+    el.style.transform='none';
+    el.classList.add('in');
+  });
+  document.querySelectorAll('.ei,.job,.job-card,.skc,.rc,.wc,.sr,.oc,.tc,.ait,.didc,.resc,.learni,.ccard,.openi').forEach(function(el){
+    el.style.opacity='1';
+    el.style.transform='none';
+  });
+}, 800);
+
 </script>
 </body>
 </html>

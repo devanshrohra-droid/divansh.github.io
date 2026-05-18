@@ -415,6 +415,22 @@ footer span{color:var(--gold);}
   .ham{display:none!important;}
   .mob{display:none!important;}
 }
+
+/* Left align fix - no justify anywhere */
+* { text-align: left !important; }
+.ctacta, .cta-bg, .cta-box { text-align: center !important; }
+footer { text-align: left !important; }
+.resc { text-align: center !important; }
+</style>
+<style>
+@media(max-width:768px){
+  .nav-links{display:none!important;}
+  .ham{display:flex!important;}
+}
+@media(min-width:769px){
+  .nav-links{display:flex!important;}
+  .ham{display:none!important;}
+}
 </style>
 </head>
 <body>
@@ -528,6 +544,20 @@ if(window.location.search.includes('sent=1')){
   var form = document.querySelector('form');
   if(form) form.parentNode.insertBefore(ok, form.nextSibling);
 }
+
+
+// Animation fallback - force all reveal items visible after 800ms
+setTimeout(function(){
+  document.querySelectorAll('.reveal').forEach(function(el){
+    el.style.opacity='1';
+    el.style.transform='none';
+    el.classList.add('in');
+  });
+  document.querySelectorAll('.ei,.job,.job-card,.skc,.rc,.wc,.sr,.oc,.tc,.ait,.didc,.resc,.learni,.ccard,.openi').forEach(function(el){
+    el.style.opacity='1';
+    el.style.transform='none';
+  });
+}, 800);
 
 </script>
 </body>
