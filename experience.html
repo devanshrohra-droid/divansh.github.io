@@ -6,436 +6,297 @@
 <title>Experience — Divansh Rohra</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{
-  --ink:#1A1A1A;--white:#FFFFFF;--cream:#FAF8F4;--soft:#F3F0EA;
-  --mid:#5A5A5A;--light:#999;--gold:#B8962E;
-  --gl:rgba(184,150,46,0.1);--gb:rgba(184,150,46,0.22);
-  --bl:#E8E3D9;--dark:#0F0F0F;
-  --glass:rgba(255,255,255,0.75);--glb:rgba(255,255,255,0.6);
-}
 *{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{font-family:"DM Sans",sans-serif;background:var(--cream);color:var(--ink);line-height:1.6;overflow-x:hidden;}
-h1,h2,h3{font-family:"DM Serif Display",serif;font-weight:400;}
+body{font-family:"DM Sans",sans-serif;background:#F3F0EA;color:#1A1A1A;overflow-x:hidden;}
+h1,h2,h3,h4{font-family:"DM Serif Display",serif;font-weight:400;}
 
-/* NAV - always fixed */
-nav{position:fixed;top:0;left:0;right:0;z-index:9000;height:64px;padding:0 5%;display:flex;align-items:center;justify-content:space-between;background:rgba(250,248,244,0.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(232,227,217,0.7);transition:transform 0.3s;}
-.logo{font-family:"DM Serif Display",serif;font-size:18px;color:var(--ink);text-decoration:none;}
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:9000;height:64px;padding:0 5%;display:flex;align-items:center;justify-content:space-between;background:rgba(250,248,244,0.95);backdrop-filter:blur(20px);border-bottom:1px solid #E8E3D9;}
+.logo{font-family:"DM Serif Display",serif;font-size:18px;color:#1A1A1A;text-decoration:none;}
 .nav-links{display:flex;align-items:center;gap:4px;}
-.nl{font-size:13px;font-weight:500;color:var(--mid);text-decoration:none;padding:7px 12px;border-radius:6px;transition:all 0.2s;}
-.nl:hover,.nl.on{color:var(--ink);background:var(--gl);}
-.nl.cta{background:var(--ink);color:var(--white)!important;padding:8px 18px;border-radius:6px;}
-.nl.cta:hover{background:#333;}
+.nl{font-size:13px;font-weight:500;color:#5A5A5A;text-decoration:none;padding:7px 12px;border-radius:6px;}
+.nl.on{color:#1A1A1A;background:rgba(184,150,46,0.1);}
+.nl.cta{background:#1A1A1A;color:#fff!important;padding:8px 18px;border-radius:6px;}
 .ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;}
-.ham span{width:22px;height:1.5px;background:var(--ink);border-radius:2px;display:block;}
-.mob{display:none;position:fixed;top:64px;left:0;right:0;background:rgba(250,248,244,0.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--bl);padding:16px 5%;flex-direction:column;gap:2px;z-index:8999;}
+.ham span{width:22px;height:1.5px;background:#1A1A1A;border-radius:2px;display:block;}
+.mob{display:none;position:fixed;top:64px;left:0;right:0;background:rgba(250,248,244,0.97);backdrop-filter:blur(20px);border-bottom:1px solid #E8E3D9;padding:16px 5%;flex-direction:column;gap:2px;z-index:8999;}
 .mob.open{display:flex;}
-.ml{font-size:15px;font-weight:500;color:var(--mid);text-decoration:none;padding:12px 0;border-bottom:1px solid var(--bl);}
-.ml:last-child{border-bottom:none;color:var(--gold);font-weight:600;}
-.pb{position:fixed;top:0;left:0;height:2px;background:var(--gold);z-index:9999;width:0;pointer-events:none;}
+.ml{font-size:15px;font-weight:500;color:#5A5A5A;text-decoration:none;padding:12px 0;border-bottom:1px solid #E8E3D9;}
+.ml:last-child{border-bottom:none;color:#B8962E;font-weight:600;}
 
-/* HERO */
-.hero-wrap{background:var(--cream);padding-top:64px;position:relative;overflow:hidden;}
-.hero-wrap::before{content:"";position:absolute;top:-150px;right:-100px;width:450px;height:450px;border-radius:50%;background:radial-gradient(circle,rgba(184,150,46,0.07) 0%,transparent 70%);pointer-events:none;}
-.hero{min-height:calc(100vh - 64px);display:grid;grid-template-columns:1fr 360px;gap:60px;align-items:center;padding:60px 5% 80px;max-width:1200px;margin:0 auto;position:relative;z-index:1;}
-.htag{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold);background:var(--gl);padding:6px 14px;border-radius:20px;margin-bottom:24px;border:1px solid var(--gb);}
-.gdot{width:6px;height:6px;border-radius:50%;background:#22C55E;animation:gp 2s infinite;}
-@keyframes gp{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(1.6)}}
-.hero h1{font-size:clamp(42px,6vw,70px);line-height:1.05;letter-spacing:-2px;color:var(--ink);margin-bottom:20px;}
-.hero h1 em{font-style:italic;color:var(--gold);}
-.hero-sub{font-size:16px;color:var(--mid);line-height:1.75;max-width:480px;margin-bottom:32px;font-weight:300;}
-.hstats{display:flex;gap:32px;padding:22px 0;border-top:1px solid var(--bl);border-bottom:1px solid var(--bl);margin-bottom:30px;flex-wrap:wrap;}
-.hn{font-size:28px;font-weight:400;color:var(--ink);letter-spacing:-1px;line-height:1;display:block;font-family:"DM Serif Display",serif;}
-.hl{font-size:11px;color:var(--light);margin-top:4px;display:block;}
-.hbtns{display:flex;gap:12px;flex-wrap:wrap;}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:7px;font-size:14px;font-weight:500;text-decoration:none;transition:all 0.2s;}
-.btn-solid{background:var(--ink);color:var(--white);}
-.btn-solid:hover{background:#333;transform:translateY(-1px);}
-.btn-outline{background:transparent;color:var(--ink);border:1.5px solid var(--bl);}
-.btn-outline:hover{border-color:var(--ink);}
+/* PAGE HERO */
+.ph{background:#F3F0EA;padding:100px 5% 50px;border-bottom:1px solid #E8E3D9;}
+.ph-inner{max-width:1100px;margin:0 auto;}
+.lbl{font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:#B8962E;display:block;margin-bottom:10px;}
+.ph h1{font-family:"DM Serif Display",serif;font-size:clamp(32px,5vw,52px);letter-spacing:-1.5px;line-height:1.1;margin-bottom:10px;color:#1A1A1A;}
+.ph p{font-size:15px;color:#5A5A5A;line-height:1.75;font-weight:300;}
 
-/* PHOTO CARD */
-.photo-wrap{position:relative;}
-.photo-frame{width:100%;aspect-ratio:4/5;border-radius:24px;overflow:hidden;border:1px solid rgba(255,255,255,0.9);box-shadow:0 20px 60px rgba(0,0,0,0.12),inset 0 1px 0 rgba(255,255,255,0.8);}
-.photo-frame img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;}
-.photo-badge{position:absolute;bottom:16px;left:12px;right:12px;background:rgba(250,248,244,0.92);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-radius:12px;padding:14px 16px;border:1px solid rgba(255,255,255,0.8);box-shadow:0 4px 16px rgba(0,0,0,0.08);}
-.pbd{width:7px;height:7px;border-radius:50%;background:#22C55E;flex-shrink:0;display:inline-block;}
-.pbt{font-size:13px;font-weight:500;color:var(--ink);}
-.pbs{font-size:11px;color:var(--mid);margin-top:3px;}
+/* TIMELINE SECTION */
+.tl-section{background:#fff;padding:40px 5% 60px;}
+.tl-inner{max-width:1100px;margin:0 auto;}
+.tl-wrap{padding-left:24px;position:relative;}
+.tl-wrap::before{content:"";position:absolute;left:4px;top:8px;bottom:40px;width:1px;background:#E8E3D9;}
 
-/* MARQUEE */
-.mq{background:var(--dark);padding:13px 0;overflow:hidden;}
-.mqt{display:flex;white-space:nowrap;animation:mqs 28s linear infinite;}
-.mqi{font-size:11px;font-weight:500;color:rgba(255,255,255,0.35);letter-spacing:2px;text-transform:uppercase;padding:0 24px;border-right:1px solid rgba(255,255,255,0.08);}
-@keyframes mqs{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+/* EACH JOB */
+.job{position:relative;margin-bottom:16px;}
+.job-dot{position:absolute;left:-24px;top:14px;width:10px;height:10px;border-radius:50%;background:#fff;border:2px solid #B8962E;z-index:1;}
+.job.active .job-dot{background:#B8962E;}
+.job-card{background:rgba(255,255,255,0.9);border:1px solid rgba(232,227,217,0.8);border-radius:14px;overflow:hidden;}
+.job-header{padding:16px 20px;display:flex;justify-content:space-between;align-items:flex-start;gap:12px;cursor:pointer;}
+.job-company{font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#B8962E;margin-bottom:5px;}
+.job-title{font-family:"DM Serif Display",serif;font-size:18px;color:#1A1A1A;margin-bottom:4px;}
+.job-meta{font-size:11px;color:#999;display:flex;gap:12px;flex-wrap:wrap;}
+.job-toggle{width:28px;height:28px;border-radius:50%;background:#F3F0EA;border:1px solid #E8E3D9;display:flex;align-items:center;justify-content:center;font-size:18px;color:#5A5A5A;flex-shrink:0;cursor:pointer;line-height:1;}
+.job-toggle.open{background:#1A1A1A;color:#fff;border-color:#1A1A1A;}
+.job-body{display:none;border-top:1px solid #E8E3D9;padding:16px 20px;}
+.job-body.open{display:block;}
+.job-bullets{list-style:none;margin-bottom:14px;}
+.job-bullets li{font-size:13px;color:#5A5A5A;line-height:1.8;padding:7px 0 7px 18px;position:relative;border-bottom:1px solid rgba(232,227,217,0.5);}
+.job-bullets li:last-child{border-bottom:none;}
+.job-bullets li::before{content:"→";position:absolute;left:0;color:#B8962E;font-size:10px;top:10px;}
+.job-bullets li strong{color:#1A1A1A;font-weight:500;}
+.job-tags{display:flex;flex-wrap:wrap;gap:5px;}
+.job-tag{font-size:10px;font-weight:500;padding:3px 9px;border-radius:20px;background:rgba(184,150,46,0.1);color:#B8962E;border:1px solid rgba(184,150,46,0.25);}
 
-/* SECTIONS */
-.sec{padding:88px 5%;}
-.sec.white{background:var(--white);}
-.sec.soft{background:var(--soft);}
-.sec-inner{max-width:1100px;margin:0 auto;}
-.lbl{font-size:11px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:12px;}
-.stitle{font-size:clamp(26px,4vw,42px);letter-spacing:-1px;line-height:1.15;margin-bottom:14px;color:var(--ink);}
-.ssub{font-size:15px;color:var(--mid);line-height:1.75;max-width:520px;margin-bottom:40px;font-weight:300;}
-
-/* ABOUT */
-.ag{display:grid;grid-template-columns:1fr 360px;gap:64px;align-items:start;}
-.at p{font-size:15px;color:var(--mid);line-height:1.85;margin-bottom:14px;font-weight:300;}
-.at p strong{color:var(--ink);font-weight:500;}
-.pills{display:flex;flex-wrap:wrap;gap:7px;margin-top:18px;}
-.pill{font-size:12px;font-weight:500;padding:5px 13px;border-radius:20px;background:var(--soft);color:var(--mid);border:1px solid var(--bl);transition:all 0.2s;}
-.pill:hover{border-color:var(--gold);color:var(--gold);}
-.sc{background:var(--glass);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-radius:18px;padding:26px;border:1px solid var(--glb);box-shadow:0 6px 28px rgba(0,0,0,0.05);}
-.sc h3{font-family:"DM Serif Display",serif;font-size:18px;font-weight:400;margin-bottom:18px;}
-.sr{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid rgba(232,227,217,0.5);}
-.sr:last-child{border-bottom:none;}
-.srn{font-family:"DM Serif Display",serif;font-size:22px;color:var(--gold);}
-.srl{font-size:13px;color:var(--mid);text-align:right;max-width:170px;line-height:1.4;}
-
-/* SKILLS */
-.skg{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;}
-.skc{background:var(--glass);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--glb);border-radius:14px;padding:22px;transition:all 0.25s;box-shadow:0 2px 10px rgba(0,0,0,0.04);}
-.skc:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(0,0,0,0.08);border-color:var(--gb);}
-.ski{width:38px;height:38px;border-radius:9px;background:var(--gl);border:1px solid var(--gb);display:flex;align-items:center;justify-content:center;margin-bottom:11px;color:var(--gold);}
-.skn{font-family:"DM Serif Display",serif;font-size:16px;color:var(--ink);margin-bottom:6px;}
-.skt{font-size:12px;color:var(--light);line-height:1.7;}
-
-/* READING */
-.rg{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
-.rc{background:var(--glass);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--glb);border-radius:16px;padding:24px;transition:all 0.25s;box-shadow:0 2px 10px rgba(0,0,0,0.04);}
-.rc:hover{transform:translateY(-3px);box-shadow:0 14px 36px rgba(0,0,0,0.08);}
-.rt{display:flex;align-items:center;gap:7px;font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:9px;}
-.rn{font-family:"DM Serif Display",serif;font-size:17px;color:var(--ink);margin-bottom:3px;}
-.ra{font-size:12px;color:var(--light);margin-bottom:11px;}
-.rd{font-size:13px;color:var(--mid);line-height:1.65;margin-bottom:13px;}
-.rb{display:inline-flex;align-items:center;font-size:11px;font-weight:600;padding:4px 11px;border-radius:20px;}
-.rbn{background:var(--gl);color:var(--gold);border:1px solid var(--gb);}
-.rbp{background:rgba(34,197,94,.1);color:#16A34A;border:1px solid rgba(34,197,94,.2);}
-.rbd{background:rgba(100,100,100,.08);color:#888;border:1px solid rgba(100,100,100,.15);}
-
-/* WORK */
-.wg{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
-.wc{background:var(--glass);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--glb);border-radius:18px;overflow:hidden;transition:all 0.25s;text-decoration:none;display:block;box-shadow:0 4px 18px rgba(0,0,0,0.06);}
-.wc:hover{transform:translateY(-4px);box-shadow:0 18px 50px rgba(0,0,0,0.1);}
-.wcb{padding:30px;}
-.wcb.b1{background:linear-gradient(135deg,rgba(26,26,26,0.93),rgba(45,45,45,0.93));}
-.wcb.b2{background:linear-gradient(135deg,rgba(107,76,10,0.93),rgba(184,150,46,0.93));}
-.wcbn{font-family:"DM Serif Display",serif;font-size:21px;color:var(--white);margin-bottom:5px;}
-.wcbs{font-size:12px;color:rgba(255,255,255,.4);}
-.wcbd{padding:20px 26px;}
-.wct{font-size:14px;font-weight:500;color:var(--ink);margin-bottom:7px;}
-.wcd{font-size:13px;color:var(--mid);line-height:1.6;margin-bottom:12px;}
-.wcp{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:10px;}
-.wcpill{font-size:11px;padding:3px 9px;border-radius:4px;background:var(--gl);color:var(--gold);border:1px solid var(--gb);font-weight:500;}
-.wcl{font-size:13px;color:var(--gold);font-weight:600;}
-
-/* PAGE HERO - two column, balanced */
-.ph{background:var(--soft);padding:110px 5% 60px;border-bottom:1px solid var(--bl);position:relative;overflow:hidden;}
-.ph::before{content:"";position:absolute;top:-80px;right:-80px;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(184,150,46,0.06) 0%,transparent 70%);}
-.ph-inner{max-width:1100px;margin:0 auto;position:relative;z-index:1;display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center;}
-.ph-left{max-width:560px;}
-.ph h1{font-size:clamp(32px,5vw,54px);letter-spacing:-1.5px;line-height:1.1;margin-bottom:12px;color:var(--ink);}
-.ph p{font-size:15px;color:var(--mid);line-height:1.75;font-weight:300;max-width:440px;}
-
-/* PAGE HERO RIGHT - compact stat cards */
-.ph-cards{display:flex;flex-direction:column;gap:10px;width:220px;}
-.ph-card{background:var(--glass);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--glb);border-radius:12px;padding:16px 18px;box-shadow:0 3px 12px rgba(0,0,0,0.05);}
-.ph-card.dark{background:rgba(15,15,15,0.85);border-color:rgba(255,255,255,0.1);}
-.ph-card-num{font-family:"DM Serif Display",serif;font-size:24px;color:var(--gold);line-height:1;}
-.ph-card-lbl{font-size:11px;color:var(--mid);margin-top:3px;}
-.ph-card.dark .ph-card-lbl{color:rgba(255,255,255,0.45);}
-.ph-card-title{font-size:12px;font-weight:600;color:var(--white);margin-bottom:8px;letter-spacing:0.5px;}
-.ph-card-items{display:flex;flex-direction:column;gap:4px;}
-.ph-card-item{font-size:11px;color:rgba(255,255,255,0.5);display:flex;align-items:center;gap:5px;}
-.ph-card-item::before{content:"✦";color:var(--gold);font-size:8px;}
-
-/* TIMELINE */
-.tl{position:relative;padding-left:22px;overflow:hidden;}
-.tl::before{content:"";position:absolute;left:4px;top:6px;bottom:30px;width:1px;background:var(--bl);}
-.ei{position:relative;margin-bottom:14px;opacity:1!important;transform:none!important;}
-.edot{position:absolute;left:-20px;top:13px;width:9px;height:9px;border-radius:50%;background:#FAF8F4;border:2px solid var(--gold);}
-.ei.cur .edot{background:var(--gold);}
-.ec{background:var(--glass);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--glb);border-radius:14px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.04);}
-.ec:hover{box-shadow:0 6px 24px rgba(0,0,0,0.08);}
-.eh{padding:18px 22px;display:flex;justify-content:space-between;align-items:flex-start;gap:14px;cursor:pointer;}
-.eco{font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:5px;}
-.er{font-family:"DM Serif Display",serif;font-size:18px;color:var(--ink);margin-bottom:4px;}
-.em{font-size:12px;color:var(--light);display:flex;gap:10px;flex-wrap:wrap;}
-.etog{width:30px;height:30px;border-radius:50%;background:rgba(250,248,244,0.8);border:1px solid var(--bl);display:flex;align-items:center;justify-content:center;color:var(--mid);font-size:16px;flex-shrink:0;cursor:pointer;transition:all 0.2s;line-height:1;}
-.etog.on{background:var(--ink);color:var(--white);border-color:var(--ink);}
-.eb{display:none;border-top:1px solid rgba(232,227,217,0.5);padding:18px 22px;}
-.eb.on{display:block;}
-.ebul{list-style:none;margin-bottom:16px;}
-.ebul li{font-size:13px;color:var(--mid);line-height:1.75;padding:7px 0 7px 16px;position:relative;border-bottom:1px solid rgba(232,227,217,0.4);}
-.ebul li:last-child{border-bottom:none;}
-.ebul li::before{content:"→";position:absolute;left:0;color:var(--gold);font-size:10px;top:9px;}
-.ebul li strong{color:var(--ink);font-weight:500;}
-.etags{display:flex;flex-wrap:wrap;gap:5px;}
-.etag{font-size:11px;font-weight:500;padding:3px 9px;border-radius:20px;background:var(--gl);color:var(--gold);border:1px solid var(--gb);}
-.og{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;}
-.oc{background:var(--glass);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--glb);border-radius:12px;padding:18px;}
-.oco{font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
-.ocr{font-family:"DM Serif Display",serif;font-size:15px;color:var(--ink);margin-bottom:2px;}
-.ocp{font-size:12px;color:var(--light);margin-bottom:8px;}
-.ocd{font-size:13px;color:var(--mid);line-height:1.6;}
-
-/* EDUCATION */
-.edug{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:52px;}
-.educ{background:var(--glass);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--glb);border-radius:16px;overflow:hidden;box-shadow:0 3px 16px rgba(0,0,0,0.05);}
-.edut{padding:26px 24px;}
-.edut.g{background:linear-gradient(135deg,rgba(107,76,10,0.9),rgba(184,150,46,0.9));}
-.edut.d{background:rgba(15,15,15,0.88);}
-.edudeg{font-family:"DM Serif Display",serif;font-size:19px;color:var(--white);margin-bottom:6px;line-height:1.3;}
-.edusch{font-size:13px;color:rgba(255,255,255,.5);line-height:1.5;}
-.edub{padding:18px 24px;}
-.edrow{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid rgba(232,227,217,0.4);}
-.edrow:last-child{border-bottom:none;}
-.edlbl{font-size:12px;color:var(--light);}
-.edval{font-size:14px;font-weight:500;color:var(--ink);}
-.edval.g{color:var(--gold);font-family:"DM Serif Display",serif;font-size:18px;}
-.tg{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:11px;}
-.tc{background:var(--glass);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--glb);border-radius:12px;padding:18px;transition:all 0.2s;box-shadow:0 2px 7px rgba(0,0,0,0.03);}
-.tc:hover{box-shadow:0 7px 20px rgba(0,0,0,0.08);transform:translateY(-2px);}
-.tci{width:34px;height:34px;border-radius:8px;background:var(--gl);border:1px solid var(--gb);display:flex;align-items:center;justify-content:center;margin-bottom:8px;color:var(--gold);}
-.tcn{font-size:13px;font-weight:600;color:var(--ink);margin-bottom:3px;}
-.tcs{font-size:12px;color:var(--light);margin-bottom:8px;}
-.tcb{display:inline-block;font-size:11px;font-weight:600;padding:3px 9px;border-radius:20px;background:var(--gl);color:var(--gold);border:1px solid var(--gb);}
-.ais{background:rgba(15,15,15,0.88);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-radius:16px;padding:36px;margin-bottom:52px;border:1px solid rgba(255,255,255,0.09);box-shadow:0 6px 28px rgba(0,0,0,0.16);}
-.ain{font-family:"DM Serif Display",serif;font-size:21px;color:var(--white);margin-bottom:8px;}
-.aisub{font-size:14px;color:rgba(255,255,255,.4);margin-bottom:24px;line-height:1.7;max-width:460px;}
-.aig{display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr));gap:9px;}
-.ait{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.09);border-radius:10px;padding:14px;transition:all 0.2s;}
-.ait:hover{border-color:var(--gb);}
-.aitn{font-size:13px;font-weight:600;color:var(--white);margin-bottom:4px;}
-.aitu{font-size:12px;color:rgba(255,255,255,.35);line-height:1.5;}
-
-/* CONTACT */
-.cog{display:grid;grid-template-columns:1fr 420px;gap:52px;align-items:start;}
-.coc{display:flex;flex-direction:column;gap:9px;margin-bottom:20px;}
-.ccard{display:flex;align-items:center;gap:12px;background:var(--glass);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--glb);border-radius:11px;padding:13px 16px;text-decoration:none;transition:all 0.2s;box-shadow:0 2px 7px rgba(0,0,0,0.03);}
-.ccard:hover{border-color:var(--gb);transform:translateX(3px);box-shadow:0 5px 18px rgba(184,150,46,.1);}
-.cico{width:34px;height:34px;border-radius:8px;background:var(--gl);border:1px solid var(--gb);display:flex;align-items:center;justify-content:center;color:var(--gold);}
-.clbl{font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--light);margin-bottom:2px;}
-.cval{font-size:13px;font-weight:500;color:var(--ink);}
-.carr{color:var(--light);font-size:12px;margin-left:auto;}
-.openc{background:rgba(15,15,15,0.88);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-radius:12px;padding:20px;border:1px solid rgba(255,255,255,0.1);}
-.opent{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
-.openi{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,.6);margin-bottom:8px;}
-.openi:last-child{margin-bottom:0;}
-.openi::before{content:"✓";color:var(--gold);font-weight:700;font-size:11px;}
-.fcard{background:var(--glass);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid var(--glb);border-radius:16px;padding:28px;box-shadow:0 6px 28px rgba(0,0,0,0.05);}
-.ftit{font-family:"DM Serif Display",serif;font-size:21px;color:var(--ink);margin-bottom:5px;}
-.fsub{font-size:14px;color:var(--mid);margin-bottom:20px;line-height:1.6;}
-.fg{margin-bottom:13px;}
-.fl{display:block;font-size:11px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;color:var(--mid);margin-bottom:5px;}
-.fi,.ft,.fs{width:100%;padding:10px 12px;border:1.5px solid rgba(232,227,217,0.7);border-radius:7px;font-family:"DM Sans",sans-serif;font-size:14px;color:var(--ink);background:rgba(250,248,244,0.7);outline:none;transition:border-color 0.2s;}
-.fi:focus,.ft:focus,.fs:focus{border-color:var(--gold);background:rgba(255,255,255,0.9);}
-.ft{resize:vertical;min-height:90px;}
-.frow{display:grid;grid-template-columns:1fr 1fr;gap:11px;}
-.fsend{width:100%;padding:12px;border-radius:7px;background:var(--ink);color:var(--white);border:none;font-family:"DM Sans",sans-serif;font-size:14px;font-weight:600;cursor:pointer;transition:all 0.2s;margin-top:5px;}
-.fsend:hover{background:#333;transform:translateY(-1px);}
-.fnote{font-size:12px;color:var(--light);margin-top:8px;text-align:center;}
-.fok{display:none;margin-top:10px;padding:12px;background:var(--gl);border:1px solid var(--gb);border-radius:7px;text-align:center;font-size:14px;color:var(--gold);font-weight:500;}
-
-/* CASE STUDIES */
-.case{background:var(--glass);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--glb);border-radius:20px;overflow:hidden;margin-bottom:26px;box-shadow:0 6px 26px rgba(0,0,0,0.06);}
-.cbanner{padding:36px;}
-.cbanner.gold{background:linear-gradient(135deg,#5A3D08,#9A7520);}
-.cbanner.dark{background:linear-gradient(135deg,#141414,#2A2A2A);}
-.cco{font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:10px;}
-.ctitle{font-family:"DM Serif Display",serif;font-size:clamp(20px,3vw,30px);color:var(--white);line-height:1.2;margin-bottom:12px;max-width:560px;}
-.cdesc{font-size:14px;color:rgba(255,255,255,.7);max-width:520px;line-height:1.7;}
-.cmets{display:flex;gap:0;margin-top:26px;border-top:1px solid rgba(255,255,255,.15);padding-top:22px;flex-wrap:wrap;}
-.cmet{flex:1;min-width:100px;padding-right:20px;}
-.cmetn{font-family:"DM Serif Display",serif;font-size:26px;color:var(--white);line-height:1;font-weight:400;}
-.cmetl{font-size:12px;color:rgba(255,255,255,.5);margin-top:4px;line-height:1.4;}
-.cbody{padding:36px;}
-.csec{margin-bottom:30px;}
-.csec:last-child{margin-bottom:0;}
-.cseclbl{font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:9px;display:block;}
-.csect{font-family:"DM Serif Display",serif;font-size:20px;color:var(--ink);margin-bottom:9px;}
-.csec p{font-size:14px;color:var(--mid);line-height:1.8;margin-bottom:11px;}
-.csec p strong{color:var(--ink);font-weight:500;}
-.didg{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:11px;}
-.didc{background:rgba(250,248,244,0.8);border:1px solid rgba(232,227,217,0.6);border-radius:11px;padding:16px;}
-.didi{width:30px;height:30px;border-radius:7px;background:var(--gl);border:1px solid var(--gb);display:flex;align-items:center;justify-content:center;color:var(--gold);margin-bottom:8px;}
-.didn{font-size:13px;font-weight:600;color:var(--ink);margin-bottom:4px;}
-.didd{font-size:13px;color:var(--mid);line-height:1.6;}
-.resg{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:11px;}
-.resc{background:rgba(250,248,244,0.8);border:1px solid rgba(232,227,217,0.6);border-radius:11px;padding:16px;text-align:center;}
-.resn{font-family:"DM Serif Display",serif;font-size:24px;color:var(--ink);line-height:1;}
-.resl{font-size:12px;color:var(--mid);margin-top:4px;line-height:1.4;}
-.learnc{background:rgba(250,248,244,0.8);border-radius:11px;padding:20px;border:1px solid rgba(232,227,217,0.6);}
-.learni{display:flex;gap:11px;margin-bottom:13px;padding-bottom:13px;border-bottom:1px solid rgba(232,227,217,0.4);}
-.learni:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none;}
-.learnnum{font-family:"DM Serif Display",serif;font-size:19px;color:var(--gold);flex-shrink:0;width:20px;}
-.learntxt{font-size:14px;color:var(--mid);line-height:1.7;}
-.learntxt strong{color:var(--ink);}
-.toolpills{display:flex;flex-wrap:wrap;gap:6px;}
-.toolpill{font-size:12px;font-weight:500;padding:4px 11px;border-radius:20px;background:var(--gl);color:var(--gold);border:1px solid var(--gb);}
-.ctacta{background:rgba(15,15,15,0.88);backdrop-filter:blur(20px);border-radius:14px;padding:36px;text-align:center;margin-top:26px;border:1px solid rgba(255,255,255,0.1);box-shadow:0 6px 26px rgba(0,0,0,0.13);}
-.ctacta h3{font-family:"DM Serif Display",serif;font-size:22px;color:var(--white);margin-bottom:9px;}
-.ctacta p{font-size:14px;color:rgba(255,255,255,.5);margin-bottom:20px;}
+/* OTHER EXPERIENCE */
+.other-section{background:#F3F0EA;padding:40px 5% 60px;}
+.other-inner{max-width:1100px;margin:0 auto;}
+.other-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px;}
+.other-card{background:rgba(255,255,255,0.8);border:1px solid rgba(232,227,217,0.8);border-radius:12px;padding:16px;}
+.other-co{font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#B8962E;margin-bottom:5px;}
+.other-role{font-family:"DM Serif Display",serif;font-size:14px;color:#1A1A1A;margin-bottom:3px;}
+.other-period{font-size:11px;color:#999;margin-bottom:8px;}
+.other-desc{font-size:12px;color:#5A5A5A;line-height:1.5;}
 
 /* FOOTER */
-footer{background:var(--dark);padding:32px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
-footer p{font-size:13px;color:rgba(255,255,255,.3);}
-footer span{color:var(--gold);}
-.fls{display:flex;gap:16px;flex-wrap:wrap;}
-.fls a{font-size:12px;color:rgba(255,255,255,.3);text-decoration:none;letter-spacing:.5px;text-transform:uppercase;transition:color 0.2s;}
-.fls a:hover{color:var(--gold);}
+footer{background:#0F0F0F;padding:28px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+footer p{font-size:13px;color:rgba(255,255,255,0.3);}
+footer span{color:#B8962E;}
+.fls{display:flex;gap:16px;}
+.fls a{font-size:12px;color:rgba(255,255,255,0.3);text-decoration:none;text-transform:uppercase;letter-spacing:0.5px;}
 
-/* REVEAL */
-.reveal{opacity:0;transform:translateY(18px);transition:opacity 0.6s ease,transform 0.6s ease;}
-.reveal.in{opacity:1;transform:none;}
-
-/* CURSOR */
-.cur{position:fixed;width:6px;height:6px;border-radius:50%;background:var(--gold);pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:left .04s,top .04s;display:none;}@media(hover:hover) and (pointer:fine){.cur{display:block;}}
-.curo{position:fixed;width:26px;height:26px;border-radius:50%;border:1.5px solid rgba(184,150,46,.3);pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:left .12s ease,top .12s ease;display:none;}@media(hover:hover) and (pointer:fine){.curo{display:block;}}
-
-@media(max-width:900px){
-  .hero,.ag,.cog,.ph-inner{grid-template-columns:1fr;}
-  .photo-wrap,.ph-cards{display:none;}
-  .skg,.rg,.wg{grid-template-columns:1fr 1fr;}
-  .hstats{gap:18px;}
-  .edug{grid-template-columns:1fr;}
+/* MOBILE */
+@media(max-width:768px){
+  .nav-links{display:none!important;}
+  .ham{display:flex!important;}
+  .other-grid{grid-template-columns:1fr;}
 }
-@media(max-width:580px){
-  .skg,.rg,.wg,.edug{grid-template-columns:1fr;}
-  nav{padding:0 4%;}
-  .sec{padding:56px 4%;}
-  .ph{padding:96px 4% 44px;}
-  .hero{padding:36px 4% 56px;}
-  .cbanner,.cbody{padding:20px;}
-  .frow{grid-template-columns:1fr;}
-  .cog{grid-template-columns:1fr;}
-}
-
-@media(max-width:768px){.nav-links{display:none!important;}.ham{display:flex!important;}}
-@media(min-width:769px){.ham{display:none!important;}}
 </style>
 </head>
 <body>
-<div class="pb"></div><nav><a href="index.html" class="logo">Divansh Rohra</a><div class="nav-links"><a href="index.html" class="nl">Home</a><a href="casestudies.html" class="nl">Case Studies</a><a href="experience.html" class="nl on">Experience</a><a href="education.html" class="nl">Education</a><a href="contact.html" class="nl cta">Contact</a></div><button class="ham" aria-label="Menu"><span></span><span></span><span></span></button></nav><div class="mob"><a href="index.html" class="ml">Home</a><a href="casestudies.html" class="ml">Case Studies</a><a href="experience.html" class="ml">Experience</a><a href="education.html" class="ml">Education</a><a href="contact.html" class="ml">Contact</a></div>
-<div class="ph"><div class="ph-inner">
-  <div class="ph-left">
+
+<nav>
+  <a href="index.html" class="logo">Divansh Rohra</a>
+  <div class="nav-links">
+    <a href="index.html" class="nl">Home</a>
+    <a href="casestudies.html" class="nl">Case Studies</a>
+    <a href="experience.html" class="nl on">Experience</a>
+    <a href="education.html" class="nl">Education</a>
+    <a href="contact.html" class="nl cta">Contact</a>
+  </div>
+  <button class="ham" onclick="document.querySelector('.mob').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mob">
+  <a href="index.html" class="ml">Home</a>
+  <a href="casestudies.html" class="ml">Case Studies</a>
+  <a href="experience.html" class="ml">Experience</a>
+  <a href="education.html" class="ml">Education</a>
+  <a href="contact.html" class="ml">Contact</a>
+</div>
+
+<div class="ph">
+  <div class="ph-inner">
     <span class="lbl">Career journey</span>
-    <h1>Where I’ve worked<br>&amp; what I’ve built.</h1>
+    <h1>Where I've worked<br>&amp; what I've built.</h1>
     <p>3+ years across F&amp;B, logistics, aviation, and consulting — in India and the UAE.</p>
   </div>
-  <div class="ph-cards">
-    <div class="ph-card"><div class="ph-card-num">3+</div><div class="ph-card-lbl">Years experience</div></div>
-    <div class="ph-card"><div class="ph-card-num">9+</div><div class="ph-card-lbl">UAE branches managed</div></div>
-    <div class="ph-card dark">
-      <div class="ph-card-title">Specialisations</div>
-      <div class="ph-card-items">
-        <div class="ph-card-item">Paid Media</div>
-        <div class="ph-card-item">Social Media Strategy</div>
-        <div class="ph-card-item">Email Marketing</div>
-        <div class="ph-card-item">AI Workflows</div>
+</div>
+
+<div class="tl-section">
+  <div class="tl-inner">
+    <div class="tl-wrap">
+
+      <!-- JOB 1: PIZZAEXPRESS — ALWAYS VISIBLE, EXPANDED BY DEFAULT -->
+      <div class="job active" id="job1">
+        <div class="job-dot"></div>
+        <div class="job-card">
+          <div class="job-header" onclick="toggle('job1')">
+            <div>
+              <div class="job-company">PizzaExpress UAE · Dubai</div>
+              <div class="job-title">Digital &amp; Social Media Executive</div>
+              <div class="job-meta">
+                <span>July 2025 – Jan 2026</span>
+                <span>Dubai, UAE</span>
+                <span>Full-time</span>
+              </div>
+            </div>
+            <div class="job-toggle open" id="toggle1">−</div>
+          </div>
+          <div class="job-body open" id="body1">
+            <ul class="job-bullets">
+              <li>Led digital and social media marketing across <strong>9+ UAE branches</strong>, aligning brand, commercial, and operational objectives.</li>
+              <li>Owned end-to-end content strategy across Instagram and Facebook — calendars, creatives, stories, and campaign assets.</li>
+              <li>Integrated <strong>ChatGPT, Claude, Gemini, and Notion AI</strong> into daily workflows for ad copies, creative briefs, content calendars, and competitor research.</li>
+              <li>Managed influencer and PR initiatives with multiple agencies and creators across multi-month campaigns.</li>
+              <li>Drove PizzaExpress UAE <strong>Loyalty Program</strong> execution with global partners on implementation and customer communications.</li>
+              <li>Played a key role in major <strong>menu launches and brand campaigns</strong>, shaping customer-facing communications.</li>
+              <li>Ran paid ads, email, and WhatsApp campaigns at brand and outlet level — setup, monitoring, and optimisation.</li>
+              <li>Acted as central coordination point between Head of Operations, Regional Director, Restaurant Managers, and agencies.</li>
+            </ul>
+            <div class="job-tags">
+              <span class="job-tag">Meta Ads</span>
+              <span class="job-tag">Content Strategy</span>
+              <span class="job-tag">Influencer Marketing</span>
+              <span class="job-tag">Email Campaigns</span>
+              <span class="job-tag">AI Tools</span>
+              <span class="job-tag">F&amp;B</span>
+              <span class="job-tag">Multi-location</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- JOB 2: TRUXCARGO -->
+      <div class="job" id="job2">
+        <div class="job-dot"></div>
+        <div class="job-card">
+          <div class="job-header" onclick="toggle('job2')">
+            <div>
+              <div class="job-company">TRUXCARGO · Delhi, India</div>
+              <div class="job-title">Digital Marketing Executive</div>
+              <div class="job-meta">
+                <span>May 2023 – Jan 2025</span>
+                <span>Delhi, India</span>
+                <span>Full-time</span>
+              </div>
+            </div>
+            <div class="job-toggle" id="toggle2">+</div>
+          </div>
+          <div class="job-body" id="body2">
+            <ul class="job-bullets">
+              <li>Grew monthly impressions from <strong>700K to 1.2M+</strong> and drove <strong>250–1,500+ new followers per month</strong>.</li>
+              <li>Managed Meta, Google, and LinkedIn Ads — improving <strong>conversion rates by 22%</strong> through audience segmentation and creative testing.</li>
+              <li>Designed <strong>80% of company branding creatives</strong> using Adobe Illustrator and Canva.</li>
+              <li>Led PR that earned <strong>cover page of Enterprise World Magazine</strong> and features in <strong>The Economic Times &amp; The Hindu</strong>.</li>
+              <li>Built email and WhatsApp campaigns — <strong>CTR improved by 72%</strong>, unsubscribes down <strong>42%</strong>.</li>
+              <li>Used AI writing tools to accelerate ad copy creation, content planning, and competitor research.</li>
+            </ul>
+            <div class="job-tags">
+              <span class="job-tag">Meta Ads</span>
+              <span class="job-tag">Google Ads</span>
+              <span class="job-tag">LinkedIn Ads</span>
+              <span class="job-tag">Email Marketing</span>
+              <span class="job-tag">PR</span>
+              <span class="job-tag">Adobe Illustrator</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- JOB 3: i2E -->
+      <div class="job" id="job3">
+        <div class="job-dot"></div>
+        <div class="job-card">
+          <div class="job-header" onclick="toggle('job3')">
+            <div>
+              <div class="job-company">i2E Consulting · Mumbai</div>
+              <div class="job-title">Digital Marketing Intern</div>
+              <div class="job-meta">
+                <span>Dec 2021 – Jun 2022</span>
+                <span>Mumbai</span>
+                <span>Internship</span>
+              </div>
+            </div>
+            <div class="job-toggle" id="toggle3">+</div>
+          </div>
+          <div class="job-body" id="body3">
+            <ul class="job-bullets">
+              <li>Managed LinkedIn, Facebook, and Instagram with consistent content scheduling and community management.</li>
+              <li>Created content calendars and developed email campaigns using Mailchimp.</li>
+              <li>Assisted with Google Ads setup and optimisation.</li>
+            </ul>
+            <div class="job-tags">
+              <span class="job-tag">Social Media</span>
+              <span class="job-tag">Mailchimp</span>
+              <span class="job-tag">Google Ads</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="other-section">
+  <div class="other-inner">
+    <span class="lbl">Earlier roles</span>
+    <h2 style="font-family:'DM Serif Display',serif;font-size:26px;letter-spacing:-0.5px;margin-bottom:4px;">Other experience</h2>
+    <div class="other-grid">
+      <div class="other-card">
+        <div class="other-co">SpiceJet · Gurugram</div>
+        <div class="other-role">GroupDesk Executive</div>
+        <div class="other-period">Nov 2022 – Mar 2023</div>
+        <div class="other-desc">Corporate sales and group booking management for a national airline.</div>
+      </div>
+      <div class="other-card">
+        <div class="other-co">Niyo Solutions · Mumbai</div>
+        <div class="other-role">Social Media Intern</div>
+        <div class="other-period">Oct – Dec 2021</div>
+        <div class="other-desc">Managed social media and supported brand marketing for a fintech startup.</div>
+      </div>
+      <div class="other-card">
+        <div class="other-co">Digifuse · Delhi</div>
+        <div class="other-role">Marketing Intern</div>
+        <div class="other-period">Jul – Sep 2020</div>
+        <div class="other-desc">Lead generation through digital platforms. Supported brand recognition and app growth.</div>
       </div>
     </div>
   </div>
-</div></div>
-<section class="sec white" style="padding-top:32px;"><div class="sec-inner"><div style="overflow:hidden;padding-left:2px;"><div class="tl">
-  <div class="ei cur"><div class="edot"></div><div class="ec">
-    <div class="eh" onclick="tog(this)"><div><div class="eco">PizzaExpress UAE · Dubai</div><div class="er">Digital &amp; Social Media Executive</div><div class="em"><span>July 2025 – Jan 2026</span><span>Dubai, UAE</span><span>Full-time</span></div></div><div class="etog on">−</div></div>
-    <div class="eb on"><ul class="ebul">
-      <li>Led digital and social media marketing across <strong>9+ UAE branches</strong>, aligning brand, commercial, and operational objectives.</li>
-      <li>Owned end-to-end content strategy across Instagram and Facebook — calendars, creatives, stories, and campaign assets.</li>
-      <li>Integrated <strong>ChatGPT, Claude, Gemini, and Notion AI</strong> into daily workflows for ad copies, creative briefs, content calendars, and competitor research.</li>
-      <li>Managed influencer and PR initiatives with multiple agencies and creators across multi-month campaigns.</li>
-      <li>Drove PizzaExpress UAE <strong>Loyalty Program</strong> execution with global partners on implementation and customer communications.</li>
-      <li>Played a key role in major <strong>menu launches and brand campaigns</strong>, shaping customer-facing communications.</li>
-      <li>Ran paid ads, email, and WhatsApp campaigns at brand and outlet level — setup, monitoring, and optimisation.</li>
-      <li>Acted as central coordination point between Head of Operations, Regional Director, Restaurant Managers, and agencies.</li>
-    </ul><div class="etags"><span class="etag">Meta Ads</span><span class="etag">Content Strategy</span><span class="etag">Influencer Marketing</span><span class="etag">Email Campaigns</span><span class="etag">AI Tools</span><span class="etag">F&amp;B</span><span class="etag">Multi-location</span></div></div>
-  </div></div>
-  <div class="ei"><div class="edot"></div><div class="ec">
-    <div class="eh" onclick="tog(this)"><div><div class="eco">TRUXCARGO · Delhi, India</div><div class="er">Digital Marketing Executive</div><div class="em"><span>May 2023 – Jan 2025</span><span>Delhi, India</span><span>Full-time</span></div></div><div class="etog">+</div></div>
-    <div class="eb"><ul class="ebul">
-      <li>Grew monthly impressions from <strong>700K to 1.2M+</strong> and drove <strong>250–1,500+ new followers per month</strong>.</li>
-      <li>Managed Meta, Google, and LinkedIn Ads — improving <strong>conversion rates by 22%</strong> through audience segmentation and creative testing.</li>
-      <li>Designed <strong>80% of company branding creatives</strong> using Adobe Illustrator and Canva.</li>
-      <li>Led PR that earned <strong>cover page of Enterprise World Magazine</strong> and features in <strong>The Economic Times &amp; The Hindu</strong>.</li>
-      <li>Built email and WhatsApp campaigns — <strong>CTR improved by 72%</strong>, unsubscribes down <strong>42%</strong>.</li>
-      <li>Used AI writing tools to accelerate ad copy creation, content planning, and competitor research.</li>
-    </ul><div class="etags"><span class="etag">Meta Ads</span><span class="etag">Google Ads</span><span class="etag">LinkedIn Ads</span><span class="etag">Email Marketing</span><span class="etag">PR</span><span class="etag">Adobe Illustrator</span></div></div>
-  </div></div>
-  <div class="ei"><div class="edot"></div><div class="ec">
-    <div class="eh" onclick="tog(this)"><div><div class="eco">i2E Consulting · Mumbai</div><div class="er">Digital Marketing Intern</div><div class="em"><span>Dec 2021 – Jun 2022</span><span>Mumbai</span><span>Internship</span></div></div><div class="etog">+</div></div>
-    <div class="eb"><ul class="ebul">
-      <li>Managed LinkedIn, Facebook, and Instagram channels with consistent content scheduling and community management.</li>
-      <li>Created content calendars and developed email campaigns using Mailchimp.</li>
-      <li>Assisted with Google Ads setup and optimisation.</li>
-    </ul><div class="etags"><span class="etag">Social Media</span><span class="etag">Mailchimp</span><span class="etag">Google Ads</span></div></div>
-  </div></div>
-</div></div></div></section>
-<section class="sec soft" style="padding-top:44px;"><div class="sec-inner">
-  <span class="lbl">Earlier roles</span><h2 class="stitle" style="font-size:clamp(20px,3vw,30px);margin-bottom:24px;">Other experience</h2>
-  <div class="og reveal">
-    <div class="oc"><div class="oco">SpiceJet · Gurugram</div><div class="ocr">GroupDesk Executive</div><div class="ocp">Nov 2022 – Mar 2023</div><div class="ocd">Corporate sales and group booking management for a national airline.</div></div>
-    <div class="oc"><div class="oco">Niyo Solutions · Mumbai</div><div class="ocr">Social Media Intern</div><div class="ocp">Oct – Dec 2021</div><div class="ocd">Managed social media and supported brand marketing for a fintech startup.</div></div>
-    <div class="oc"><div class="oco">Digifuse · Delhi</div><div class="ocr">Marketing Intern</div><div class="ocp">Jul – Sep 2020</div><div class="ocd">Lead generation through digital platforms. Supported brand recognition and app growth.</div></div>
+</div>
+
+<footer>
+  <p>© 2026 <span>Divansh Rohra</span> · Dubai, UAE</p>
+  <div class="fls">
+    <a href="index.html">Home</a>
+    <a href="casestudies.html">Case Studies</a>
+    <a href="experience.html">Experience</a>
+    <a href="education.html">Education</a>
+    <a href="contact.html">Contact</a>
   </div>
-</div></section>
-<footer><p>© 2026 <span>Divansh Rohra</span> · Dubai, UAE</p><div class="fls"><a href="index.html">Home</a><a href="casestudies.html">Case Studies</a><a href="experience.html">Experience</a><a href="education.html">Education</a><a href="contact.html">Contact</a></div></footer>
+</footer>
+
 <script>
-// Cursor
-var cur=document.createElement('div'),curo=document.createElement('div');
-cur.className='cur';curo.className='curo';
-document.body.appendChild(cur);document.body.appendChild(curo);
-document.addEventListener('mousemove',function(e){cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px';curo.style.left=e.clientX+'px';curo.style.top=e.clientY+'px';});
+function toggle(id) {
+  var body = document.getElementById('body' + id.replace('job',''));
+  var tog = document.getElementById('toggle' + id.replace('job',''));
+  var job = document.getElementById(id);
+  var isOpen = body.classList.contains('open');
 
-// Progress bar
-var pb=document.querySelector('.pb');
-window.addEventListener('scroll',function(){if(pb)pb.style.width=Math.min((window.scrollY/(document.body.scrollHeight-window.innerHeight))*100,100)+'%';});
+  // Close all
+  document.querySelectorAll('.job-body').forEach(function(b){ b.classList.remove('open'); });
+  document.querySelectorAll('.job-toggle').forEach(function(t){ t.classList.remove('open'); t.textContent = '+'; });
+  document.querySelectorAll('.job').forEach(function(j){ j.classList.remove('active'); j.querySelector('.job-dot').style.background = '#fff'; });
 
-// Nav - stays fixed, hides/shows on scroll
-var nav=document.querySelector('nav'),ly=0;
-window.addEventListener('scroll',function(){
-  var y=window.scrollY;
-  if(nav)nav.style.transform=(y>ly&&y>120)?'translateY(-100%)':'translateY(0)';
-  ly=y;
-});
-
-// Hamburger
-var ham=document.querySelector('.ham'),mob=document.querySelector('.mob');
-if(ham&&mob)ham.addEventListener('click',function(){mob.classList.toggle('open');});
-
-// Count up
-function countUp(el,delay){
-  var t=parseFloat(el.getAttribute('data-count')),s=el.getAttribute('data-suffix')||'',p=el.getAttribute('data-prefix')||'',d=el.getAttribute('data-count').indexOf('.')>-1,dur=1800;
-  setTimeout(function(){var t0=performance.now();(function tick(now){var pr=Math.min((now-t0)/dur,1),e=1-Math.pow(1-pr,4),v=t*e;el.textContent=p+(d?v.toFixed(1):Math.floor(v))+s;if(pr<1)requestAnimationFrame(tick);else el.textContent=p+(d?t.toFixed(1):Math.floor(t))+s;})(t0);},delay||0);
+  // Open clicked if it was closed
+  if (!isOpen) {
+    body.classList.add('open');
+    tog.classList.add('open');
+    tog.textContent = '−';
+    job.classList.add('active');
+    job.querySelector('.job-dot').style.background = '#B8962E';
+  }
 }
-window.addEventListener('load',function(){document.querySelectorAll('[data-onload]').forEach(function(el,i){countUp(el,150+i*170);});});
-var cio=new IntersectionObserver(function(ee){ee.forEach(function(e){if(e.isIntersecting&&!e.target.hasAttribute('data-onload')){countUp(e.target,0);cio.unobserve(e.target);}});},{threshold:0.25});
-document.querySelectorAll('[data-count]:not([data-onload])').forEach(function(el){cio.observe(el);});
 
-// Reveal
-var rio=new IntersectionObserver(function(ee){ee.forEach(function(e){if(!e.isIntersecting)return;var el=e.target;el.classList.add('in');var kids=el.querySelectorAll('.skc,.rc,.wc,.sr,.oc,.tc,.ait,.didc,.resc,.learni,.ccard,.openi');kids.forEach(function(k,i){k.style.opacity='0';k.style.transform='translateY(13px)';k.style.transition='opacity .42s ease '+(i*.06)+'s,transform .42s ease '+(i*.06)+'s';setTimeout(function(){k.style.opacity='1';k.style.transform='none';},45+i*55);});rio.unobserve(el);});},{threshold:0.06,rootMargin:'0px 0px -20px 0px'});
-document.querySelectorAll('.reveal').forEach(function(el){rio.observe(el);});
-
-// Accordion
-window.tog=function(h){var b=h.nextElementSibling,t=h.querySelector('.etog'),o=b.classList.contains('on');document.querySelectorAll('.eb').forEach(function(x){x.classList.remove('on');});document.querySelectorAll('.etog').forEach(function(x){x.classList.remove('on');x.textContent='+';});if(!o){b.classList.add('on');t.classList.add('on');t.textContent='−';}};
-
-// Contact form - sends to Formspree which emails to devanshrohra@gmail.com
-window.sub=function(e){
-  e.preventDefault();
-  var form=e.target;
-  var data=new FormData(form);
-  var ok=document.getElementById('fok');
-  fetch('https://formspree.io/f/xpwzgkvo',{method:'POST',body:data,headers:{'Accept':'application/json'}})
-  .then(function(r){
-    if(r.ok){
-      if(ok){ok.style.display='block';form.reset();setTimeout(function(){ok.style.display='none';},6000);}
-    } else {
-      if(ok){ok.style.display='block';ok.textContent='✓ Message sent! I\'ll get back to you within 24 hours.';ok.style.display='block';}
-    }
-  }).catch(function(){
-    if(ok){ok.style.display='block';ok.textContent='Message received! I\'ll get back to you soon.';}
-  });
-};
+// Nav scroll hide/show
+var nav = document.querySelector('nav'), lastY = 0;
+window.addEventListener('scroll', function(){
+  var y = window.scrollY;
+  nav.style.transform = (y > lastY && y > 100) ? 'translateY(-100%)' : 'translateY(0)';
+  lastY = y;
+});
 </script>
 </body>
 </html>
