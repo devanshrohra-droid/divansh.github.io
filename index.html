@@ -305,47 +305,34 @@ footer span{color:var(--gold);}
   nav{padding:0 4%;}
   .sec{padding:56px 4%;}
   .ph{padding:96px 4% 44px;}
-  .hero{padding:36px 4% 56px;}
+  .hero{padding:36px 4% 48px;}.hero h1{font-size:48px!important;letter-spacing:-2px!important;line-height:1.05!important;}
   .cbanner,.cbody{padding:20px;}
   .frow{grid-template-columns:1fr;}
   .cog{grid-template-columns:1fr;}
 }
 
-
-
-
-/* NAV RESPONSIVE */
 @media(max-width:768px){.nav-links{display:none!important;}.ham{display:flex!important;}}
 @media(min-width:769px){.nav-links{display:flex!important;}.ham{display:none!important;}}
 
-/* PAGE LOAD ANIMATIONS */
-@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
-@keyframes fadeIn{from{opacity:0}to{opacity:1}}
-
-nav{animation:fadeIn 0.4s ease both;}
-
-/* Override reveal — animate immediately, no scroll wait */
-.reveal{
-  animation:fadeUp 0.75s cubic-bezier(0.22,1,0.36,1) both!important;
-  opacity:0;transform:translateY(22px);
+@media(max-width:768px){
+  p,li,.hero-sub,.at p,.ph p,.ssub,.wcd,.other-desc,.job-bullets li{text-align:left!important;}
 }
-.sec:nth-child(2) .reveal{animation-delay:0.05s!important;}
-.sec:nth-child(3) .reveal{animation-delay:0.1s!important;}
-.sec:nth-child(4) .reveal{animation-delay:0.15s!important;}
-.sec:nth-child(5) .reveal{animation-delay:0.2s!important;}
 
+/* ── PAGE LOAD ANIMATIONS ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
 /* Hero stagger */
-.htag{animation:fadeUp 0.6s 0.05s cubic-bezier(0.22,1,0.36,1) both;}
-.hero h1{animation:fadeUp 0.7s 0.12s cubic-bezier(0.22,1,0.36,1) both;}
-.hero-sub{animation:fadeUp 0.6s 0.2s cubic-bezier(0.22,1,0.36,1) both;}
-.hstats{animation:fadeUp 0.6s 0.28s cubic-bezier(0.22,1,0.36,1) both;}
-.hbtns{animation:fadeUp 0.6s 0.36s cubic-bezier(0.22,1,0.36,1) both;}
-.ph-inner{animation:fadeUp 0.7s 0.08s cubic-bezier(0.22,1,0.36,1) both;}
+.htag{animation:fadeUp 0.55s 0.05s cubic-bezier(0.22,1,0.36,1) both}
+.hero h1{animation:fadeUp 0.65s 0.12s cubic-bezier(0.22,1,0.36,1) both}
+.hero-sub{animation:fadeUp 0.55s 0.20s cubic-bezier(0.22,1,0.36,1) both}
+.hstats{animation:fadeUp 0.55s 0.28s cubic-bezier(0.22,1,0.36,1) both}
+.hbtns{animation:fadeUp 0.55s 0.36s cubic-bezier(0.22,1,0.36,1) both}
+/* Section reveals — animation replaces transition so it fires on load without race condition */
+.reveal{animation:fadeUp 0.7s 0.05s cubic-bezier(0.22,1,0.36,1) both!important}
+.sec:nth-of-type(2) .reveal{animation-delay:0.08s!important}
+.sec:nth-of-type(3) .reveal{animation-delay:0.12s!important}
+.sec:nth-of-type(4) .reveal{animation-delay:0.16s!important}
+.sec:nth-of-type(5) .reveal{animation-delay:0.20s!important}
 
-/* Case studies page */
-.cbanner:nth-child(1){animation:fadeUp 0.65s 0.05s cubic-bezier(0.22,1,0.36,1) both;}
-.cbanner:nth-child(2){animation:fadeUp 0.65s 0.2s cubic-bezier(0.22,1,0.36,1) both;}
-.ctacta{animation:fadeUp 0.7s 0.35s cubic-bezier(0.22,1,0.36,1) both;}
 </style>
 </head>
 <body>
@@ -478,6 +465,26 @@ window.sub=function(e){
     if(ok){ok.style.display='block';ok.textContent='Message received! I\'ll get back to you soon.';}
   });
 };
+
+// NAV: JS override — works regardless of CSS cascade
+(function(){
+  function fixNav(){
+    var nl=document.querySelector('.nav-links');
+    var hm=document.querySelector('.ham');
+    if(!nl||!hm)return;
+    if(window.innerWidth<=768){nl.style.display='none';hm.style.display='flex';}
+    else{nl.style.display='flex';hm.style.display='none';}
+  }
+  fixNav();
+  window.addEventListener('resize',fixNav);
+  // Animation fallback — force all reveal items visible after 600ms
+  setTimeout(function(){
+    document.querySelectorAll('.reveal,.ei,.job,.job-card,.skc,.rc,.wc,.sr,.ait,.didc,.resc,.learni,.ccard,.openi,.other-card').forEach(function(el){
+      el.style.opacity='1';el.style.transform='translateY(0)';el.classList.add('in');
+    });
+  },600);
+})();
+
 </script>
 </body>
 </html>

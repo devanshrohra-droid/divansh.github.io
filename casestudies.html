@@ -273,7 +273,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:9000;height:64px;padding:0 5%;di
 .learntxt strong{color:var(--ink);}
 .toolpills{display:flex;flex-wrap:wrap;gap:6px;}
 .toolpill{font-size:12px;font-weight:500;padding:4px 11px;border-radius:20px;background:var(--gl);color:var(--gold);border:1px solid var(--gb);}
-.ctacta{background:rgba(15,15,15,0.88);backdrop-filter:blur(20px);border-radius:14px;padding:36px;text-align:center;margin-top:26px;border:1px solid rgba(255,255,255,0.1);box-shadow:0 6px 26px rgba(0,0,0,0.13);}
+.ctacta{background:linear-gradient(145deg,#111,#0A0A0A);border-radius:18px;padding:44px 32px;text-align:center;margin-top:30px;border:1px solid rgba(184,150,46,0.45);box-shadow:0 0 60px rgba(184,150,46,0.15),0 12px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(184,150,46,0.2);}
 .ctacta h3{font-family:"DM Serif Display",serif;font-size:22px;color:var(--white);margin-bottom:9px;}
 .ctacta p{font-size:14px;color:rgba(255,255,255,.5);margin-bottom:20px;}
 
@@ -311,8 +311,8 @@ footer span{color:var(--gold);}
   .cog{grid-template-columns:1fr;}
 }
 
-
-
+@media(max-width:768px){.nav-links{display:none!important;}.ham{display:flex!important;}}
+@media(min-width:769px){.nav-links{display:flex!important;}.ham{display:none!important;}}
 
 @media(max-width:600px){
   .cbanner{padding:20px 18px!important;}
@@ -329,38 +329,24 @@ footer span{color:var(--gold);}
   .csec p{font-size:13px!important;}
 }
 
-/* NAV RESPONSIVE */
-@media(max-width:768px){.nav-links{display:none!important;}.ham{display:flex!important;}}
-@media(min-width:769px){.nav-links{display:flex!important;}.ham{display:none!important;}}
-
-/* PAGE LOAD ANIMATIONS */
-@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
-@keyframes fadeIn{from{opacity:0}to{opacity:1}}
-
-nav{animation:fadeIn 0.4s ease both;}
-
-/* Override reveal — animate immediately, no scroll wait */
-.reveal{
-  animation:fadeUp 0.75s cubic-bezier(0.22,1,0.36,1) both!important;
-  opacity:0;transform:translateY(22px);
+@media(max-width:768px){
+  .learni p,.csec p,.cbody p,.cdesc,.clearn p,li{text-align:left!important;}
+  .ctacta h3,.ctacta p{text-align:center!important;}
 }
-.sec:nth-child(2) .reveal{animation-delay:0.05s!important;}
-.sec:nth-child(3) .reveal{animation-delay:0.1s!important;}
-.sec:nth-child(4) .reveal{animation-delay:0.15s!important;}
-.sec:nth-child(5) .reveal{animation-delay:0.2s!important;}
 
-/* Hero stagger */
-.htag{animation:fadeUp 0.6s 0.05s cubic-bezier(0.22,1,0.36,1) both;}
-.hero h1{animation:fadeUp 0.7s 0.12s cubic-bezier(0.22,1,0.36,1) both;}
-.hero-sub{animation:fadeUp 0.6s 0.2s cubic-bezier(0.22,1,0.36,1) both;}
-.hstats{animation:fadeUp 0.6s 0.28s cubic-bezier(0.22,1,0.36,1) both;}
-.hbtns{animation:fadeUp 0.6s 0.36s cubic-bezier(0.22,1,0.36,1) both;}
-.ph-inner{animation:fadeUp 0.7s 0.08s cubic-bezier(0.22,1,0.36,1) both;}
+/* ── PAGE LOAD ANIMATIONS ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+/* Page hero stagger */
+.ph-inner .lbl{animation:fadeUp 0.5s 0.05s cubic-bezier(0.22,1,0.36,1) both}
+.ph-inner h1{animation:fadeUp 0.65s 0.12s cubic-bezier(0.22,1,0.36,1) both}
+.ph-inner p{animation:fadeUp 0.5s 0.20s cubic-bezier(0.22,1,0.36,1) both}
+/* Case banners */
+.cbanner:nth-child(1){animation:fadeUp 0.65s 0.06s cubic-bezier(0.22,1,0.36,1) both}
+.cbanner:nth-child(2){animation:fadeUp 0.65s 0.20s cubic-bezier(0.22,1,0.36,1) both}
+.ctacta{animation:fadeUp 0.65s 0.34s cubic-bezier(0.22,1,0.36,1) both}
+/* Reveal sections */
+.reveal{animation:fadeUp 0.7s 0.05s cubic-bezier(0.22,1,0.36,1) both!important}
 
-/* Case studies page */
-.cbanner:nth-child(1){animation:fadeUp 0.65s 0.05s cubic-bezier(0.22,1,0.36,1) both;}
-.cbanner:nth-child(2){animation:fadeUp 0.65s 0.2s cubic-bezier(0.22,1,0.36,1) both;}
-.ctacta{animation:fadeUp 0.7s 0.35s cubic-bezier(0.22,1,0.36,1) both;}
 </style>
 </head>
 <body>
@@ -482,7 +468,7 @@ nav{animation:fadeIn 0.4s ease both;}
 
   <div style="position:relative;background:linear-gradient(135deg,#1A1A1A,#0A0A0A);border:1px solid rgba(184,150,46,0.4);border-radius:18px;padding:44px 36px;text-align:center;margin-top:28px;box-shadow:0 0 60px rgba(184,150,46,0.12),inset 0 1px 0 rgba(184,150,46,0.2);">
     <div style="position:absolute;top:0;left:50%;transform:translateX(-50%);width:55%;height:1px;background:linear-gradient(90deg,transparent,rgba(184,150,46,0.7),transparent);"></div>
-    <h3 style="font-family:'DM Serif Display',serif;font-size:28px;color:#FFFFFF;margin-bottom:12px;line-height:1.2;font-weight:400;">Want results like these<br>for your brand?</h3>
+    <div style="display:inline-block;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#B8962E;background:rgba(184,150,46,0.12);border:1px solid rgba(184,150,46,0.3);padding:5px 14px;border-radius:20px;margin-bottom:16px;">Open to new roles</div><h3 style="font-family:'DM Serif Display',serif;font-size:28px;color:#FFFFFF;margin-bottom:12px;line-height:1.2;font-weight:400;">Want results like these<br>for your brand?</h3>
     <p style="font-size:15px;color:rgba(255,255,255,0.6);margin-bottom:28px;line-height:1.75;max-width:440px;margin-left:auto;margin-right:auto;">Available for Digital Marketing Executive roles in Dubai and open to freelance projects across F&amp;B, retail, and e-commerce.</p>
     <a href="contact.html" style="display:inline-block;padding:15px 40px;background:#B8962E;color:#1A1A1A;border-radius:8px;font-size:15px;font-weight:700;text-decoration:none;font-family:'DM Sans',sans-serif;letter-spacing:0.3px;">Get in touch →</a>
   </div>
@@ -544,6 +530,26 @@ window.sub=function(e){
     if(ok){ok.style.display='block';ok.textContent='Message received! I\'ll get back to you soon.';}
   });
 };
+
+// NAV: JS override — works regardless of CSS cascade
+(function(){
+  function fixNav(){
+    var nl=document.querySelector('.nav-links');
+    var hm=document.querySelector('.ham');
+    if(!nl||!hm)return;
+    if(window.innerWidth<=768){nl.style.display='none';hm.style.display='flex';}
+    else{nl.style.display='flex';hm.style.display='none';}
+  }
+  fixNav();
+  window.addEventListener('resize',fixNav);
+  // Animation fallback — force all reveal items visible after 600ms
+  setTimeout(function(){
+    document.querySelectorAll('.reveal,.ei,.job,.job-card,.skc,.rc,.wc,.sr,.ait,.didc,.resc,.learni,.ccard,.openi,.other-card').forEach(function(el){
+      el.style.opacity='1';el.style.transform='translateY(0)';el.classList.add('in');
+    });
+  },600);
+})();
+
 </script>
 </body>
 </html>
