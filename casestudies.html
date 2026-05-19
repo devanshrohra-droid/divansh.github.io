@@ -273,7 +273,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:9000;height:64px;padding:0 5%;di
 .learntxt strong{color:var(--ink);}
 .toolpills{display:flex;flex-wrap:wrap;gap:6px;}
 .toolpill{font-size:12px;font-weight:500;padding:4px 11px;border-radius:20px;background:var(--gl);color:var(--gold);border:1px solid var(--gb);}
-.ctacta{background:linear-gradient(145deg,#111,#0A0A0A);border-radius:18px;padding:44px 32px;text-align:center;margin-top:30px;border:1px solid rgba(184,150,46,0.45);box-shadow:0 0 60px rgba(184,150,46,0.15),0 12px 40px rgba(0,0,0,0.5),inset 0 1px 0 rgba(184,150,46,0.2);}
+.ctacta{background:rgba(15,15,15,0.88);backdrop-filter:blur(20px);border-radius:14px;padding:36px;text-align:center;margin-top:26px;border:1px solid rgba(255,255,255,0.1);box-shadow:0 6px 26px rgba(0,0,0,0.13);}
 .ctacta h3{font-family:"DM Serif Display",serif;font-size:22px;color:var(--white);margin-bottom:9px;}
 .ctacta p{font-size:14px;color:rgba(255,255,255,.5);margin-bottom:20px;}
 
@@ -311,8 +311,8 @@ footer span{color:var(--gold);}
   .cog{grid-template-columns:1fr;}
 }
 
-@media(max-width:768px){.nav-links{display:none!important;}.ham{display:flex!important;}}
-@media(min-width:769px){.ham{display:none!important;}}
+
+
 
 @media(max-width:600px){
   .cbanner{padding:20px 18px!important;}
@@ -328,10 +328,140 @@ footer span{color:var(--gold);}
   .csect{font-size:17px!important;}
   .csec p{font-size:13px!important;}
 }
+@media(max-width:768px){.nav-links{display:none!important;}.ham{display:flex!important;}.mob{display:block!important;}}
+@media(min-width:769px){.nav-links{display:flex!important;}.ham{display:none!important;}.mob{display:none!important;}}
+
+/* Left align body text */
+.at p,.at li,.cbody p,.cbody li,.cdesc,.learntxt,.csec p,.rd,.hero-sub,.ph p,.skt,.wcd,.pbs{text-align:left!important;}
+.ctacta,.ctacta h3,.ctacta p,.resc,.resn,.resl{text-align:center!important;}
 
 @media(max-width:768px){
-  .learni p,.csec p,.cbody p,.cdesc,.clearn p,li{text-align:left!important;}
-  .ctacta h3,.ctacta p{text-align:center!important;}
+  .tg{grid-template-columns:repeat(2,1fr)!important;}
+  .aig{grid-template-columns:repeat(2,1fr)!important;}
+}
+
+.ctacta{
+  background:linear-gradient(145deg,#181818,#0d0d0d)!important;
+  border:1px solid rgba(184,150,46,0.45)!important;
+  box-shadow:0 0 50px rgba(184,150,46,0.12),0 8px 32px rgba(0,0,0,0.5),inset 0 1px 0 rgba(184,150,46,0.18)!important;
+  border-radius:18px!important;
+  position:relative!important;
+}
+.ctacta::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:55%;height:1px;background:linear-gradient(90deg,transparent,rgba(184,150,46,0.7),transparent);}
+.ctacta h3{color:#fff!important;}
+.ctacta p{color:rgba(255,255,255,0.65)!important;}
+
+/* ── PAGE LOAD ANIMATIONS ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+
+/* Hero / page-hero fade up */
+.ph-inner,.hero>div,.hero-wrap>div,.htag,.hero h1,.hero-sub,.hstats,.hbtns{
+  animation:fadeUp 0.7s cubic-bezier(0.22,1,0.36,1) both;
+}
+.htag{animation-delay:0.05s}
+.hero h1{animation-delay:0.1s}
+.hero-sub{animation-delay:0.18s}
+.hstats{animation-delay:0.26s}
+.hbtns{animation-delay:0.34s}
+.ph-inner{animation-delay:0.08s}
+
+/* Section cards stagger */
+.skc:nth-child(1){animation:fadeUp 0.6s 0.05s cubic-bezier(0.22,1,0.36,1) both}
+.skc:nth-child(2){animation:fadeUp 0.6s 0.12s cubic-bezier(0.22,1,0.36,1) both}
+.skc:nth-child(3){animation:fadeUp 0.6s 0.19s cubic-bezier(0.22,1,0.36,1) both}
+.skc:nth-child(4){animation:fadeUp 0.6s 0.26s cubic-bezier(0.22,1,0.36,1) both}
+.skc:nth-child(5){animation:fadeUp 0.6s 0.33s cubic-bezier(0.22,1,0.36,1) both}
+.skc:nth-child(6){animation:fadeUp 0.6s 0.40s cubic-bezier(0.22,1,0.36,1) both}
+
+.rc:nth-child(1){animation:fadeUp 0.6s 0.05s cubic-bezier(0.22,1,0.36,1) both}
+.rc:nth-child(2){animation:fadeUp 0.6s 0.15s cubic-bezier(0.22,1,0.36,1) both}
+.rc:nth-child(3){animation:fadeUp 0.6s 0.25s cubic-bezier(0.22,1,0.36,1) both}
+
+.wc:nth-child(1){animation:fadeUp 0.6s 0.08s cubic-bezier(0.22,1,0.36,1) both}
+.wc:nth-child(2){animation:fadeUp 0.6s 0.18s cubic-bezier(0.22,1,0.36,1) both}
+
+.cbanner:nth-child(1){animation:fadeUp 0.65s 0.05s cubic-bezier(0.22,1,0.36,1) both}
+.cbanner:nth-child(2){animation:fadeUp 0.65s 0.18s cubic-bezier(0.22,1,0.36,1) both}
+
+.job:nth-child(1){animation:fadeUp 0.6s 0.05s cubic-bezier(0.22,1,0.36,1) both}
+.job:nth-child(2){animation:fadeUp 0.6s 0.15s cubic-bezier(0.22,1,0.36,1) both}
+.job:nth-child(3){animation:fadeUp 0.6s 0.25s cubic-bezier(0.22,1,0.36,1) both}
+.other-card:nth-child(1){animation:fadeUp 0.6s 0.05s cubic-bezier(0.22,1,0.36,1) both}
+.other-card:nth-child(2){animation:fadeUp 0.6s 0.15s cubic-bezier(0.22,1,0.36,1) both}
+.other-card:nth-child(3){animation:fadeUp 0.6s 0.25s cubic-bezier(0.22,1,0.36,1) both}
+
+.edug>*:nth-child(1){animation:fadeUp 0.6s 0.05s cubic-bezier(0.22,1,0.36,1) both}
+.edug>*:nth-child(2){animation:fadeUp 0.6s 0.15s cubic-bezier(0.22,1,0.36,1) both}
+
+.sc,.at{animation:fadeUp 0.65s 0.1s cubic-bezier(0.22,1,0.36,1) both}
+.cog{animation:fadeUp 0.65s 0.1s cubic-bezier(0.22,1,0.36,1) both}
+
+/* nav fade in */
+nav{animation:fadeIn 0.4s ease both}
+
+/* ── PREMIUM CTA BOX ── */
+.ctacta{
+  background:linear-gradient(135deg,#0f0f0f 0%,#1a1205 50%,#0f0f0f 100%)!important;
+  border:1px solid rgba(184,150,46,0.5)!important;
+  box-shadow:
+    0 0 0 1px rgba(184,150,46,0.08),
+    0 0 60px rgba(184,150,46,0.18),
+    0 20px 60px rgba(0,0,0,0.6),
+    inset 0 1px 0 rgba(184,150,46,0.25),
+    inset 0 -1px 0 rgba(184,150,46,0.08)!important;
+  border-radius:20px!important;
+  padding:52px 40px!important;
+  position:relative!important;
+  overflow:hidden!important;
+  animation:fadeUp 0.7s 0.3s cubic-bezier(0.22,1,0.36,1) both;
+}
+.ctacta::before{
+  content:'';position:absolute;top:-1px;left:50%;transform:translateX(-50%);
+  width:60%;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(184,150,46,0.9),transparent);
+}
+.ctacta::after{
+  content:'';position:absolute;top:0;left:0;right:0;bottom:0;
+  background:radial-gradient(ellipse 60% 40% at 50% 0%,rgba(184,150,46,0.07),transparent);
+  pointer-events:none;
+}
+.ctacta .cta-eyebrow{
+  display:inline-flex;align-items:center;gap:7px;
+  font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;
+  color:#B8962E;background:rgba(184,150,46,0.1);
+  border:1px solid rgba(184,150,46,0.3);padding:5px 16px;border-radius:20px;
+  margin-bottom:18px;
+}
+.ctacta .cta-eyebrow::before{content:'';width:6px;height:6px;border-radius:50%;background:#B8962E;animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(0.8)}}
+.ctacta h3{
+  font-family:"DM Serif Display",serif!important;
+  font-size:32px!important;color:#ffffff!important;
+  letter-spacing:-0.5px!important;line-height:1.2!important;
+  margin-bottom:14px!important;font-weight:400!important;
+}
+.ctacta p{
+  font-size:15px!important;color:rgba(255,255,255,0.6)!important;
+  line-height:1.75!important;max-width:480px!important;
+  margin:0 auto 28px!important;
+}
+.ctacta .btn-solid{
+  background:#B8962E!important;color:#0f0f0f!important;
+  font-weight:700!important;padding:14px 40px!important;
+  font-size:14px!important;letter-spacing:0.5px!important;
+  border-radius:8px!important;
+  box-shadow:0 4px 20px rgba(184,150,46,0.4)!important;
+  transition:all 0.2s ease!important;
+}
+.ctacta .btn-solid:hover{
+  background:#d4ae45!important;
+  box-shadow:0 6px 28px rgba(184,150,46,0.55)!important;
+  transform:translateY(-1px)!important;
+}
+@media(max-width:768px){
+  .ctacta{padding:36px 22px!important;border-radius:16px!important;}
+  .ctacta h3{font-size:24px!important;}
 }
 </style>
 </head>
@@ -454,7 +584,7 @@ footer span{color:var(--gold);}
 
   <div style="position:relative;background:linear-gradient(135deg,#1A1A1A,#0A0A0A);border:1px solid rgba(184,150,46,0.4);border-radius:18px;padding:44px 36px;text-align:center;margin-top:28px;box-shadow:0 0 60px rgba(184,150,46,0.12),inset 0 1px 0 rgba(184,150,46,0.2);">
     <div style="position:absolute;top:0;left:50%;transform:translateX(-50%);width:55%;height:1px;background:linear-gradient(90deg,transparent,rgba(184,150,46,0.7),transparent);"></div>
-    <div style="display:inline-block;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#B8962E;background:rgba(184,150,46,0.12);border:1px solid rgba(184,150,46,0.3);padding:5px 14px;border-radius:20px;margin-bottom:16px;">Open to new roles</div><h3 style="font-family:'DM Serif Display',serif;font-size:28px;color:#FFFFFF;margin-bottom:12px;line-height:1.2;font-weight:400;">Want results like these<br>for your brand?</h3>
+    <h3 style="font-family:'DM Serif Display',serif;font-size:28px;color:#FFFFFF;margin-bottom:12px;line-height:1.2;font-weight:400;">Want results like these<br>for your brand?</h3>
     <p style="font-size:15px;color:rgba(255,255,255,0.6);margin-bottom:28px;line-height:1.75;max-width:440px;margin-left:auto;margin-right:auto;">Available for Digital Marketing Executive roles in Dubai and open to freelance projects across F&amp;B, retail, and e-commerce.</p>
     <a href="contact.html" style="display:inline-block;padding:15px 40px;background:#B8962E;color:#1A1A1A;border-radius:8px;font-size:15px;font-weight:700;text-decoration:none;font-family:'DM Sans',sans-serif;letter-spacing:0.3px;">Get in touch →</a>
   </div>
@@ -517,24 +647,14 @@ window.sub=function(e){
   });
 };
 
-// NAV: JS override — works regardless of CSS cascade
-(function(){
-  function fixNav(){
-    var nl=document.querySelector('.nav-links');
-    var hm=document.querySelector('.ham');
-    if(!nl||!hm)return;
-    if(window.innerWidth<=768){nl.style.display='none';hm.style.display='flex';}
-    else{nl.style.display='flex';hm.style.display='none';}
-  }
-  fixNav();
-  window.addEventListener('resize',fixNav);
-  // Animation fallback — force all reveal items visible after 600ms
-  setTimeout(function(){
-    document.querySelectorAll('.reveal,.ei,.job,.job-card,.skc,.rc,.wc,.sr,.ait,.didc,.resc,.learni,.ccard,.openi,.other-card').forEach(function(el){
-      el.style.opacity='1';el.style.transform='translateY(0)';el.classList.add('in');
-    });
-  },600);
-})();
+// Fallback: force all animated elements visible after 600ms
+setTimeout(function(){
+  document.querySelectorAll('.reveal,.ei,.ec,.sr,.rc,.wc,.skc,.rg,.wg,.skg,.ag,.og,.oc,.tc,.ait,.ph,.ctacta,.cbanner,.openi,.other-card,.job,.job-card').forEach(function(el){
+    el.style.opacity='1';
+    el.style.transform='translateY(0)';
+    el.classList.add('visible','in');
+  });
+}, 600);
 
 </script>
 </body>
