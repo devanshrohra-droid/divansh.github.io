@@ -311,68 +311,12 @@ footer span{color:var(--gold);}
   .cog{grid-template-columns:1fr;}
 }
 
-
-
-@media(max-width:768px){.nav-links{display:none!important;}.ham{display:flex!important;}.mob{display:block!important;}}
-@media(min-width:769px){.nav-links{display:flex!important;}.ham{display:none!important;}.mob{display:none!important;}}
-
-/* Left align body text */
-.at p,.at li,.cbody p,.cbody li,.cdesc,.learntxt,.csec p,.rd,.hero-sub,.ph p,.skt,.wcd,.pbs{text-align:left!important;}
-.ctacta,.ctacta h3,.ctacta p,.resc,.resn,.resl{text-align:center!important;}
+@media(max-width:768px){.nav-links{display:none!important;}.ham{display:flex!important;}}
+@media(min-width:769px){.ham{display:none!important;}}
 
 @media(max-width:768px){
-  .tg{grid-template-columns:repeat(2,1fr)!important;}
-  .aig{grid-template-columns:repeat(2,1fr)!important;}
+  p,li,.hero-sub,.at p,.ph p,.ssub,.wcd,.other-desc,.job-bullets li{text-align:left!important;}
 }
-
-/* ── PAGE LOAD ANIMATIONS ── */
-@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
-@keyframes fadeIn{from{opacity:0}to{opacity:1}}
-
-/* Hero / page-hero fade up */
-.ph-inner,.hero>div,.hero-wrap>div,.htag,.hero h1,.hero-sub,.hstats,.hbtns{
-  animation:fadeUp 0.7s cubic-bezier(0.22,1,0.36,1) both;
-}
-.htag{animation-delay:0.05s}
-.hero h1{animation-delay:0.1s}
-.hero-sub{animation-delay:0.18s}
-.hstats{animation-delay:0.26s}
-.hbtns{animation-delay:0.34s}
-.ph-inner{animation-delay:0.08s}
-
-/* Section cards stagger */
-.skc:nth-child(1){animation:fadeUp 0.6s 0.05s cubic-bezier(0.22,1,0.36,1) both}
-.skc:nth-child(2){animation:fadeUp 0.6s 0.12s cubic-bezier(0.22,1,0.36,1) both}
-.skc:nth-child(3){animation:fadeUp 0.6s 0.19s cubic-bezier(0.22,1,0.36,1) both}
-.skc:nth-child(4){animation:fadeUp 0.6s 0.26s cubic-bezier(0.22,1,0.36,1) both}
-.skc:nth-child(5){animation:fadeUp 0.6s 0.33s cubic-bezier(0.22,1,0.36,1) both}
-.skc:nth-child(6){animation:fadeUp 0.6s 0.40s cubic-bezier(0.22,1,0.36,1) both}
-
-.rc:nth-child(1){animation:fadeUp 0.6s 0.05s cubic-bezier(0.22,1,0.36,1) both}
-.rc:nth-child(2){animation:fadeUp 0.6s 0.15s cubic-bezier(0.22,1,0.36,1) both}
-.rc:nth-child(3){animation:fadeUp 0.6s 0.25s cubic-bezier(0.22,1,0.36,1) both}
-
-.wc:nth-child(1){animation:fadeUp 0.6s 0.08s cubic-bezier(0.22,1,0.36,1) both}
-.wc:nth-child(2){animation:fadeUp 0.6s 0.18s cubic-bezier(0.22,1,0.36,1) both}
-
-.cbanner:nth-child(1){animation:fadeUp 0.65s 0.05s cubic-bezier(0.22,1,0.36,1) both}
-.cbanner:nth-child(2){animation:fadeUp 0.65s 0.18s cubic-bezier(0.22,1,0.36,1) both}
-
-.job:nth-child(1){animation:fadeUp 0.6s 0.05s cubic-bezier(0.22,1,0.36,1) both}
-.job:nth-child(2){animation:fadeUp 0.6s 0.15s cubic-bezier(0.22,1,0.36,1) both}
-.job:nth-child(3){animation:fadeUp 0.6s 0.25s cubic-bezier(0.22,1,0.36,1) both}
-.other-card:nth-child(1){animation:fadeUp 0.6s 0.05s cubic-bezier(0.22,1,0.36,1) both}
-.other-card:nth-child(2){animation:fadeUp 0.6s 0.15s cubic-bezier(0.22,1,0.36,1) both}
-.other-card:nth-child(3){animation:fadeUp 0.6s 0.25s cubic-bezier(0.22,1,0.36,1) both}
-
-.edug>*:nth-child(1){animation:fadeUp 0.6s 0.05s cubic-bezier(0.22,1,0.36,1) both}
-.edug>*:nth-child(2){animation:fadeUp 0.6s 0.15s cubic-bezier(0.22,1,0.36,1) both}
-
-.sc,.at{animation:fadeUp 0.65s 0.1s cubic-bezier(0.22,1,0.36,1) both}
-.cog{animation:fadeUp 0.65s 0.1s cubic-bezier(0.22,1,0.36,1) both}
-
-/* nav fade in */
-nav{animation:fadeIn 0.4s ease both}
 </style>
 </head>
 <body>
@@ -418,11 +362,7 @@ nav{animation:fadeIn 0.4s ease both}
   <div class="fcard">
     <div class="ftit">Send a message</div>
     <p class="fsub">I’ll get back to you within 24 hours.</p>
-    <form action="https://formsubmit.co/devanshrohra@gmail.com" method="POST">
-      <input type="hidden" name="_subject" value="New message from your portfolio">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://devanshrohra-droid.github.io/divansh.github.io/contact.html?sent=1">
-      <input type="hidden" name="_template" value="table">
+    <form onsubmit="sub(event)">
       <div class="frow">
         <div class="fg"><label class="fl">Your name</label><input name="name" type="text" class="fi" placeholder="John Smith" required></div>
         <div class="fg"><label class="fl">Company</label><input name="company" type="text" class="fi" placeholder="Company name"></div>
@@ -496,21 +436,24 @@ window.sub=function(e){
   });
 };
 
-// Fallback: force all animated elements visible after 600ms
-setTimeout(function(){
-  document.querySelectorAll('.reveal,.ei,.ec,.sr,.rc,.wc,.skc,.rg,.wg,.skg,.ag,.og,.oc,.tc,.ait,.ph,.ctacta,.cbanner,.openi,.other-card,.job,.job-card').forEach(function(el){
-    el.style.opacity='1';
-    el.style.transform='translateY(0)';
-    el.classList.add('visible','in');
-  });
-}, 600);
-
-
-// Show success if redirected back after form submission
-if(window.location.search.includes('sent=1')){
-  var ok=document.getElementById('fok');
-  if(ok){ok.style.display='block';ok.textContent='✓ Message sent! I\'ll get back to you within 24 hours.';}
-}
+// NAV: JS override — works regardless of CSS cascade
+(function(){
+  function fixNav(){
+    var nl=document.querySelector('.nav-links');
+    var hm=document.querySelector('.ham');
+    if(!nl||!hm)return;
+    if(window.innerWidth<=768){nl.style.display='none';hm.style.display='flex';}
+    else{nl.style.display='flex';hm.style.display='none';}
+  }
+  fixNav();
+  window.addEventListener('resize',fixNav);
+  // Animation fallback — force all reveal items visible after 600ms
+  setTimeout(function(){
+    document.querySelectorAll('.reveal,.ei,.job,.job-card,.skc,.rc,.wc,.sr,.ait,.didc,.resc,.learni,.ccard,.openi,.other-card').forEach(function(el){
+      el.style.opacity='1';el.style.transform='translateY(0)';el.classList.add('in');
+    });
+  },600);
+})();
 
 </script>
 </body>
