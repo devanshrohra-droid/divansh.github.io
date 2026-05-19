@@ -81,6 +81,10 @@ footer span{color:#B8962E;}
   .ham{display:flex!important;}
   .other-grid{grid-template-columns:1fr;}
 }
+
+@media(max-width:768px){
+  p,li,.hero-sub,.at p,.ph p,.ssub,.wcd,.other-desc,.job-bullets li{text-align:left!important;}
+}
 </style>
 </head>
 <body>
@@ -297,6 +301,26 @@ window.addEventListener('scroll', function(){
   nav.style.transform = (y > lastY && y > 100) ? 'translateY(-100%)' : 'translateY(0)';
   lastY = y;
 });
+
+// NAV: JS override — works regardless of CSS cascade
+(function(){
+  function fixNav(){
+    var nl=document.querySelector('.nav-links');
+    var hm=document.querySelector('.ham');
+    if(!nl||!hm)return;
+    if(window.innerWidth<=768){nl.style.display='none';hm.style.display='flex';}
+    else{nl.style.display='flex';hm.style.display='none';}
+  }
+  fixNav();
+  window.addEventListener('resize',fixNav);
+  // Animation fallback — force all reveal items visible after 600ms
+  setTimeout(function(){
+    document.querySelectorAll('.reveal,.ei,.job,.job-card,.skc,.rc,.wc,.sr,.ait,.didc,.resc,.learni,.ccard,.openi,.other-card').forEach(function(el){
+      el.style.opacity='1';el.style.transform='translateY(0)';el.classList.add('in');
+    });
+  },600);
+})();
+
 </script>
 </body>
 </html>
