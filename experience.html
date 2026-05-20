@@ -85,27 +85,6 @@ footer span{color:#B8962E;}
 @media(max-width:768px){
   p,li,.hero-sub,.at p,.ph p,.ssub,.wcd,.other-desc,.job-bullets li{text-align:left!important;}
 }
-@media(min-width:769px){.nav-links{display:flex!important;}.ham{display:none!important;}}
-
-/* ── PAGE-LOAD ANIMATIONS ── */
-@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-.htag{animation:fadeUp .5s .05s cubic-bezier(.22,1,.36,1) both}
-.hero h1{animation:fadeUp .6s .12s cubic-bezier(.22,1,.36,1) both}
-.hero-sub{animation:fadeUp .5s .20s cubic-bezier(.22,1,.36,1) both}
-.hstats{animation:fadeUp .5s .28s cubic-bezier(.22,1,.36,1) both}
-.hbtns{animation:fadeUp .5s .36s cubic-bezier(.22,1,.36,1) both}
-.ph-inner .lbl{animation:fadeUp .45s .05s cubic-bezier(.22,1,.36,1) both}
-.ph-inner h1{animation:fadeUp .6s .12s cubic-bezier(.22,1,.36,1) both}
-.ph-inner p{animation:fadeUp .45s .20s cubic-bezier(.22,1,.36,1) both}
-.reveal{animation:fadeUp .65s .08s cubic-bezier(.22,1,.36,1) both!important}
-.sec:nth-of-type(2) .reveal{animation-delay:.12s!important}
-.sec:nth-of-type(3) .reveal{animation-delay:.16s!important}
-.sec:nth-of-type(4) .reveal{animation-delay:.20s!important}
-.sec:nth-of-type(5) .reveal{animation-delay:.24s!important}
-.cbanner:nth-child(1){animation:fadeUp .6s .06s cubic-bezier(.22,1,.36,1) both}
-.cbanner:nth-child(2){animation:fadeUp .6s .20s cubic-bezier(.22,1,.36,1) both}
-.ctacta{animation:fadeUp .6s .34s cubic-bezier(.22,1,.36,1) both}
-
 </style>
 </head>
 <body>
@@ -117,6 +96,7 @@ footer span{color:#B8962E;}
     <a href="casestudies.html" class="nl">Case Studies</a>
     <a href="experience.html" class="nl on">Experience</a>
     <a href="education.html" class="nl">Education</a>
+    <a href="services.html" class="nl">Services</a>
     <a href="contact.html" class="nl cta">Contact</a>
   </div>
   <button class="ham" onclick="document.querySelector('.mob').classList.toggle('open')">
@@ -128,6 +108,7 @@ footer span{color:#B8962E;}
   <a href="casestudies.html" class="ml">Case Studies</a>
   <a href="experience.html" class="ml">Experience</a>
   <a href="education.html" class="ml">Education</a>
+  <a href="services.html" class="ml">Services</a>
   <a href="contact.html" class="ml">Contact</a>
 </div>
 
@@ -289,6 +270,7 @@ footer span{color:#B8962E;}
     <a href="casestudies.html">Case Studies</a>
     <a href="experience.html">Experience</a>
     <a href="education.html">Education</a>
+    <a href="services.html">Services</a>
     <a href="contact.html">Contact</a>
   </div>
 </footer>
@@ -334,7 +316,14 @@ window.addEventListener('scroll', function(){
   }
   fixNav();
   window.addEventListener('resize',fixNav);
-  })();
+  // Animation fallback — force all reveal items visible after 600ms
+  setTimeout(function(){
+    document.querySelectorAll('.reveal,.ei,.job,.job-card,.skc,.rc,.wc,.sr,.ait,.didc,.resc,.learni,.ccard,.openi,.other-card').forEach(function(el){
+      el.style.opacity='1';el.style.transform='translateY(0)';el.classList.add('in');
+    });
+  },600);
+})();
+
 </script>
 </body>
 </html>
