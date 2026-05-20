@@ -26,11 +26,15 @@ nav{position:fixed;top:0;left:0;right:0;z-index:9000;height:64px;padding:0 5%;di
 .ml:last-child{border-bottom:none;color:#B8962E;font-weight:600;}
 
 /* PAGE HERO */
-.ph{background:#F3F0EA;padding:100px 5% 0;border-bottom:1px solid #E8E3D9;}
-.ph-inner{max-width:1100px;margin:0 auto;}
+.ph{background:#F3F0EA;padding:100px 5% 48px;border-bottom:1px solid #E8E3D9;}
+.ph-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;}
 .lbl{font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:#B8962E;display:block;margin-bottom:10px;}
-.ph h1{font-family:"DM Serif Display",serif;font-size:clamp(32px,5vw,52px);letter-spacing:-1.5px;line-height:1.1;margin-bottom:10px;color:#1A1A1A;}
+.ph h1{font-family:"DM Serif Display",serif;font-size:clamp(28px,4.5vw,52px);letter-spacing:-1.5px;line-height:1.1;margin-bottom:10px;color:#1A1A1A;}
 .ph p{font-size:15px;color:#5A5A5A;line-height:1.75;font-weight:300;}
+.ph-tags{padding-left:40px;border-left:1px solid #E8E3D9;display:flex;flex-wrap:wrap;gap:10px;}
+.ph-tag{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;padding:9px 14px;border-radius:8px;background:#fff;border:1px solid #E8E3D9;color:#5A5A5A;}
+.ph-tag i{font-size:15px;color:#B8962E;}
+@media(max-width:768px){.ph-inner{grid-template-columns:1fr;}.ph-tags{padding-left:0;border-left:none;border-top:1px solid #E8E3D9;padding-top:24px;}}
 
 /* FOOTER */
 footer{background:#0F0F0F;padding:28px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
@@ -166,9 +170,19 @@ footer span{color:#B8962E;}
 <!-- PAGE HERO -->
 <div class="ph">
   <div class="ph-inner">
-    <span class="lbl">Work with me</span>
-    <h1>Digital marketing<br>for UAE brands.</h1>
-    <p>I help small brands in the UAE show up online and get results.</p>
+    <div class="ph-left">
+      <span class="lbl">Work with me</span>
+      <h1>Digital marketing<br>for UAE brands.</h1>
+      <p>I help small brands in the UAE show up online and get results.</p>
+    </div>
+    <div class="ph-tags">
+      <span class="ph-tag"><i class="ti ti-device-mobile" aria-hidden="true"></i>Social Media</span>
+      <span class="ph-tag"><i class="ti ti-speakerphone" aria-hidden="true"></i>Paid Ads</span>
+      <span class="ph-tag"><i class="ti ti-mail" aria-hidden="true"></i>Email &amp; WhatsApp</span>
+      <span class="ph-tag"><i class="ti ti-chart-bar" aria-hidden="true"></i>Analytics</span>
+      <span class="ph-tag"><i class="ti ti-map-pin" aria-hidden="true"></i>UAE-based</span>
+      <span class="ph-tag"><i class="ti ti-calendar" aria-hidden="true"></i>Month-to-month</span>
+    </div>
   </div>
 </div>
   </div>
