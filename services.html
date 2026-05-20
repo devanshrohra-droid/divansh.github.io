@@ -25,11 +25,17 @@ nav{position:fixed;top:0;left:0;right:0;z-index:9000;height:64px;padding:0 5%;di
 .ml:last-child{border-bottom:none;color:#B8962E;font-weight:600;}
 
 /* PAGE HERO */
-.ph{background:#F3F0EA;padding:100px 5% 50px;border-bottom:1px solid #E8E3D9;}
+.ph{background:#F3F0EA;padding:100px 5% 0;border-bottom:1px solid #E8E3D9;}
 .ph-inner{max-width:1100px;margin:0 auto;}
 .lbl{font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:#B8962E;display:block;margin-bottom:10px;}
 .ph h1{font-family:"DM Serif Display",serif;font-size:clamp(32px,5vw,52px);letter-spacing:-1.5px;line-height:1.1;margin-bottom:10px;color:#1A1A1A;}
-.ph p{font-size:15px;color:#5A5A5A;line-height:1.75;font-weight:300;}
+.ph p{font-size:15px;color:#5A5A5A;line-height:1.75;font-weight:300;margin-bottom:44px;}
+.ph-stats{display:flex;gap:0;border-top:1px solid #E8E3D9;margin:0 -5%;padding:0 5%;}
+.ph-stat{flex:1;padding:20px 0;border-right:1px solid #E8E3D9;}
+.ph-stat:last-child{border-right:none;}
+.ph-stat-num{font-family:"DM Serif Display",serif;font-size:28px;color:#1A1A1A;letter-spacing:-0.5px;margin-bottom:2px;}
+.ph-stat-num span{color:#B8962E;}
+.ph-stat-label{font-size:11px;color:#999;font-weight:400;}
 
 /* FOOTER */
 footer{background:#0F0F0F;padding:28px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
@@ -61,9 +67,19 @@ footer span{color:#B8962E;}
 ══════════════════════════════════ */
 
 /* INTRO STRIP */
-.sv-intro-strip{background:#fff;border-bottom:1px solid #E8E3D9;padding:36px 5%;}
-.sv-intro-inner{max-width:1100px;margin:0 auto;}
-.sv-intro-text{font-size:17px;color:#5A5A5A;line-height:1.9;font-weight:300;max-width:680px;}
+.sv-intro-strip{background:#fff;border-bottom:1px solid #E8E3D9;padding:48px 5%;}
+.sv-intro-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;}
+.sv-intro-text{font-size:17px;color:#5A5A5A;line-height:1.9;font-weight:300;}
+.sv-creds{display:flex;flex-direction:column;gap:10px;}
+.sv-cred{display:flex;align-items:center;gap:14px;padding:14px 16px;background:#F3F0EA;border:1px solid #E8E3D9;border-radius:12px;}
+.sv-cred-icon{font-size:18px;flex-shrink:0;}
+.sv-cred-text{font-size:13px;color:#5A5A5A;line-height:1.5;}
+.sv-cred-text strong{display:block;font-size:13px;font-weight:600;color:#1A1A1A;margin-bottom:1px;}
+@media(max-width:768px){
+  .sv-intro-inner{grid-template-columns:1fr;}
+  .ph-stats{gap:0;flex-wrap:wrap;}
+  .ph-stat{flex:1 1 45%;}
+}
 
 /* WHAT I DO — card grid */
 .sv-what{background:#F3F0EA;padding:56px 5%;}
@@ -156,13 +172,45 @@ footer span{color:#B8962E;}
     <span class="lbl">Work with me</span>
     <h1>Digital marketing<br>for UAE brands.</h1>
     <p>I help small brands in the UAE show up online and get results.</p>
+    <div class="ph-stats">
+      <div class="ph-stat">
+        <div class="ph-stat-num">3<span>+</span></div>
+        <div class="ph-stat-label">Years experience</div>
+      </div>
+      <div class="ph-stat">
+        <div class="ph-stat-num">9</div>
+        <div class="ph-stat-label">UAE locations managed</div>
+      </div>
+      <div class="ph-stat">
+        <div class="ph-stat-num">2</div>
+        <div class="ph-stat-label">Countries worked in</div>
+      </div>
+      <div class="ph-stat">
+        <div class="ph-stat-num">AED<br><span style="font-size:22px">3,500</span></div>
+        <div class="ph-stat-label">Starting per month</div>
+      </div>
+    </div>
   </div>
 </div>
 
 <!-- INTRO -->
 <div class="sv-intro-strip">
-  <div class="sv-intro-inner reveal">
-    <p class="sv-intro-text">After 3+ years managing digital marketing across India and UAE — including PizzaExpress across 9 UAE locations — I know what actually moves the needle for consumer brands.</p>
+  <div class="sv-intro-inner">
+    <p class="sv-intro-text reveal">After 3+ years managing digital marketing across India and UAE — including PizzaExpress across 9 UAE locations — I know what actually moves the needle for consumer brands.</p>
+    <div class="sv-creds reveal r2">
+      <div class="sv-cred">
+        <div class="sv-cred-icon">🍕</div>
+        <div class="sv-cred-text"><strong>PizzaExpress UAE</strong>Digital &amp; Social Media Executive — 9 branches</div>
+      </div>
+      <div class="sv-cred">
+        <div class="sv-cred-icon">🚚</div>
+        <div class="sv-cred-text"><strong>TRUXCARGO India</strong>Grew impressions from 700K to 1.2M+/month</div>
+      </div>
+      <div class="sv-cred">
+        <div class="sv-cred-icon">📈</div>
+        <div class="sv-cred-text"><strong>Paid Ads</strong>22% conversion rate improvement across Meta &amp; Google</div>
+      </div>
+    </div>
   </div>
 </div>
 
