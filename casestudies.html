@@ -387,7 +387,7 @@ footer span{color:var(--gold);}
   </div>
 </div></div>
 <section class="sec white" style="padding-top:40px;"><div class="sec-inner">
-  <div class="case reveal" id="case1">
+<div class="case reveal" id="case1">
     <div class="cbanner dark">
       <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:20px;">
         <div style="flex:1;">
@@ -485,50 +485,60 @@ footer span{color:var(--gold);}
 
   <div style="position:relative;background:linear-gradient(135deg,#1A1A1A,#0A0A0A);border:1px solid rgba(184,150,46,0.4);border-radius:18px;padding:44px 36px;text-align:center;margin-top:28px;box-shadow:0 0 60px rgba(184,150,46,0.12),inset 0 1px 0 rgba(184,150,46,0.2);">
     <div style="position:absolute;top:0;left:50%;transform:translateX(-50%);width:55%;height:1px;background:linear-gradient(90deg,transparent,rgba(184,150,46,0.7),transparent);"></div>
-    <div style="display:inline-block;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#B8962E;background:rgba(184,150,46,0.12);border:1px solid rgba(184,150,46,0.3);padding:5px 14px;border-radius:20px;margin-bottom:16px;">Open to new roles</div><h3 style="font-family:'DM Serif Display',serif;font-size:28px;color:#FFFFFF;margin-bottom:12px;line-height:1.2;font-weight:400;">Want results like these<br>for your brand?</h3>
-    <p style="font-size:15px;color:rgba(255,255,255,0.6);margin-bottom:28px;line-height:1.75;max-width:440px;margin-left:auto;margin-right:auto;">Available for Digital Marketing Executive roles in Dubai and open to freelance projects across F&amp;B, retail, and e-commerce.</p>
-    <a href="contact.html" style="display:inline-block;padding:15px 40px;background:#B8962E;color:#1A1A1A;border-radius:8px;font-size:15px;font-weight:700;text-decoration:none;font-family:'DM Sans',sans-serif;letter-spacing:0.3px;">Get in touch →</a>
-  </div>
-</div>
-  <div class="case reveal" id="case3">
+    <div style="display:inline-block;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#B8962E;background:rgba(184,150,46,0.12);border:1px solid rgba(184,150,46,0.3);padding:5p  <div class="case reveal" id="case3">
     <div class="cbanner" style="background:linear-gradient(135deg,#222,#181818);border:1.5px solid rgba(184,150,46,0.25);">
       <div style="flex:1;">
         <div class="cco">Project 03 · TRUXCARGO · Delhi, India · 2024</div>
-        <h2 class="ctitle" style="color:#FAF8F4;">Building a WhatsApp automation system that handled customer queries without a human in the loop.</h2>
-        <p class="cdesc" style="color:rgba(255,255,255,0.55);">How I designed and deployed an auto-reply bot on WhatsApp Business that resolved common queries, routed leads, and freed the team from manual message handling — using no-code tools and business APIs.</p>
+        <h2 class="ctitle" style="color:#FAF8F4;">Building a WhatsApp chatbot that stopped the phone from ringing.</h2>
+        <p class="cdesc" style="color:rgba(255,255,255,0.55);">How I built and refined a WhatsApp automation system at TRUXCARGO — moving across three platforms to land on the right stack — and built a chatbot that handled FAQs, order tracking, and agent routing without human intervention.</p>
       </div>
     </div>
     <div class="cbody">
       <div class="csec">
         <span class="cseclbl">The problem</span>
-        <h3 class="csect">Hundreds of repetitive WhatsApp messages every day — and one team answering them all manually.</h3>
-        <p>At TRUXCARGO, our WhatsApp channel was the primary inbound touchpoint for leads and customers. The same questions came in constantly — pricing, pickup availability, tracking, service areas. Every response was manual, inconsistent, and slow.</p>
-        <p>I saw it as a solvable problem. We didn't need more people — we needed a system.</p>
+        <h3 class="csect">Customers were calling to ask questions the business had already answered — just not where customers were looking.</h3>
+        <p>At TRUXCARGO, our WhatsApp channel was the primary inbound touchpoint. The same questions came in constantly — order tracking, pickup availability, pricing, service areas. Every response was manual. The team was spending hours each day on messages that followed the exact same patterns.</p>
+        <p>Worse, queries were spilling over to the customer service phone line — calls that didn't need to happen if the right information was surfaced at the right moment. The goal was simple: intercept those queries on WhatsApp before they became phone calls.</p>
+      </div>
+      <div class="csec">
+        <span class="cseclbl">The platform journey</span>
+        <h3 class="csect">Three platforms before finding the right fit.</h3>
+        <div class="learnc">
+          <div class="learni"><div class="learnnum">1</div><div class="learntxt"><strong>Interakt</strong> — Started here. Good for basic broadcast messaging and simple auto-replies, but hit its ceiling quickly when we needed branching logic and conditional flows.</div></div>
+          <div class="learni"><div class="learnnum">2</div><div class="learntxt"><strong>WATI</strong> — Moved here for more automation depth. The flows were more capable but the reliability wasn't there for our use case — bots would break mid-conversation and leave users with no response.</div></div>
+          <div class="learni"><div class="learnnum">3</div><div class="learntxt"><strong>DoubleTick</strong> — The right call. Advanced chatbot builder, stable automation flows, and proper agent re-routing. This is where we actually built what we were trying to build from the start.</div></div>
+        </div>
       </div>
       <div class="csec">
         <span class="cseclbl">What I built</span>
-        <h3 class="csect">A fully automated WhatsApp reply flow using the WhatsApp Business API.</h3>
+        <h3 class="csect">A structured chatbot flow covering FAQs, order tracking, and intelligent agent handoff.</h3>
         <div class="didg">
-          <div class="didc"><div class="didi"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg></div><div class="didn">Keyword-triggered responses</div><div class="didd">Mapped the most common inbound queries to keyword triggers — the bot replied instantly with the right answer.</div></div>
-          <div class="didc"><div class="didi"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div><div class="didn">Lead qualification flow</div><div class="didd">New enquiries triggered a multi-step flow — collecting pickup city, cargo type, and urgency before routing to the right team member.</div></div>
-          <div class="didc"><div class="didi"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg></div><div class="didn">Smart handoff logic</div><div class="didd">When a query fell outside the bot's scope, it flagged the conversation and notified the right team member — no queries slipped through.</div></div>
-          <div class="didc"><div class="didi"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg></div><div class="didn">Response time data</div><div class="didd">Tracked average first-response time before and after — the drop was significant. The team noticed within the first week.</div></div>
+          <div class="didc"><div class="didi"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg></div><div class="didn">FAQ automation</div><div class="didd">Mapped the most common inbound queries — pricing, pickup zones, delivery timelines — into predefined flows with instant responses, no agent needed.</div></div>
+          <div class="didc"><div class="didi"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg></div><div class="didn">Order tracking flow</div><div class="didd">Built a dedicated order tracking path — customers could get status updates directly through the bot, which eliminated the most common reason people were calling customer service.</div></div>
+          <div class="didc"><div class="didi"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div><div class="didn">Smart agent routing</div><div class="didd">When a query fell outside the bot's scope, the flow routed to the right specific agent — not just a generic inbox. Sales queries went to sales, operations to ops.</div></div>
+          <div class="didc"><div class="didi"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg></div><div class="didn">Ongoing optimisation</div><div class="didd">As the bots occasionally broke down — a reality with any automation stack — I was close enough to the system to diagnose and fix issues quickly, keeping downtime minimal.</div></div>
         </div>
       </div>
       <div class="csec">
-        <span class="cseclbl">What this taught me</span>
-        <h3 class="csect">Automation isn't just a tech project — it's a process design project.</h3>
+        <span class="cseclbl">Impact</span>
+        <h3 class="csect">First response time dropped by over 80%. The phone stopped ringing as much.</h3>
+        <p>Before the bot, average first response time on WhatsApp was measured in hours — dependent on team availability. After implementation, the bot responded in seconds for the query categories it covered. That improvement translated directly into a measurable reduction in inbound customer service calls, because customers were getting answers before they reached for the phone.</p>
+        <p>The team's manual message load dropped significantly. Time that was going into repetitive replies went back into work that actually needed human attention.</p>
+      </div>
+      <div class="csec">
+        <span class="cseclbl">What this built in me</span>
+        <h3 class="csect">Learning a new technology end-to-end — and staying ahead when it breaks.</h3>
         <div class="learnc">
-          <div class="learni"><div class="learnnum">1</div><div class="learntxt"><strong>The hardest part was mapping the flows, not building them.</strong> Understanding what customers actually asked — and in what order — took more time than the technical setup.</div></div>
-          <div class="learni"><div class="learnnum">2</div><div class="learntxt"><strong>People trust automation when it's fast and relevant.</strong> The bot didn't need to be perfect — it needed to answer the right questions immediately.</div></div>
-          <div class="learni"><div class="learnnum">3</div><div class="learntxt"><strong>This project made me realise I could build things, not just plan them.</strong> It changed how I think about marketing — as systems, not just campaigns.</div></div>
+          <div class="learni"><div class="learnnum">1</div><div class="learntxt"><strong>Platform-switching isn't failure — it's iteration.</strong> Moving from Interakt to WATI to DoubleTick wasn't wasted effort. Each platform taught me what the right solution needed to do.</div></div>
+          <div class="learni"><div class="learnnum">2</div><div class="learntxt"><strong>Automation systems need an owner, not just a builder.</strong> The bots broke. What mattered was that I understood the system well enough to fix it fast — not wait for a vendor's support team.</div></div>
+          <div class="learni"><div class="learnnum">3</div><div class="learntxt"><strong>The best marketing automation removes friction customers didn't even tell you about.</strong> Nobody said "I wish I could track my order on WhatsApp." But once it worked, the call volume told the story.</div></div>
         </div>
       </div>
-      <div class="csec"><span class="cseclbl">Tools used</span><div class="toolpills"><span class="toolpill">WhatsApp Business API</span><span class="toolpill">No-code automation</span><span class="toolpill">Flow design</span><span class="toolpill">Lead routing</span></div></div>
+      <div class="csec"><span class="cseclbl">Stack</span><div class="toolpills"><span class="toolpill">DoubleTick</span><span class="toolpill">WATI</span><span class="toolpill">Interakt</span><span class="toolpill">WhatsApp Business API</span><span class="toolpill">Chatbot flow design</span><span class="toolpill">Agent routing</span><span class="toolpill">FAQ automation</span></div></div>
     </div>
   </div>
 
-  <div class="case reveal" id="case4">
+<div class="case reveal" id="case4">
     <div class="cbanner" style="background:linear-gradient(135deg,#1a1a2e,#16213e);border:1.5px solid rgba(184,150,46,0.25);">
       <div style="flex:1;">
         <div class="cco">Project 04 · Personal Build · @modifiedwhipss · 2025</div>
@@ -572,7 +582,16 @@ footer span{color:var(--gold);}
       <div class="csec"><span class="cseclbl">Stack</span><div class="toolpills"><span class="toolpill">Python</span><span class="toolpill">Telegram Bot</span><span class="toolpill">Claude AI</span><span class="toolpill">RapidAPI</span><span class="toolpill">Cloudinary</span><span class="toolpill">Make</span><span class="toolpill">Railway</span><span class="toolpill">Cloudflare</span></div></div>
     </div>
   </div>
-</section>
+
+
+  <div style="position:relative;background:linear-gradient(135deg,#1A1A1A,#0A0A0A);border:1px solid rgba(184,150,46,0.4);border-radius:18px;padding:44px 36px;text-align:center;margin-top:28px;box-shadow:0 0 60px rgba(184,150,46,0.12),inset 0 1px 0 rgba(184,150,46,0.2);">
+    <div style="position:absolute;top:0;left:50%;transform:translateX(-50%);width:55%;height:1px;background:linear-gradient(90deg,transparent,rgba(184,150,46,0.7),transparent);"></div>
+    <div style="display:inline-block;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#B8962E;background:rgba(184,150,46,0.12);border:1px solid rgba(184,150,46,0.3);padding:5px 14px;border-radius:20px;margin-bottom:16px;">Open to new roles</div><h3 style="font-family:'DM Serif Display',serif;font-size:28px;color:#FFFFFF;margin-bottom:12px;line-height:1.2;font-weight:400;">Want results like these<br>for your brand?</h3>
+    <p style="font-size:15px;color:rgba(255,255,255,0.6);margin-bottom:28px;line-height:1.75;max-width:440px;margin-left:auto;margin-right:auto;">Available for Digital Marketing Executive roles in Dubai and open to freelance projects across F&amp;B, retail, and e-commerce.</p>
+    <a href="contact.html" style="display:inline-block;padding:15px 40px;background:#B8962E;color:#1A1A1A;border-radius:8px;font-size:15px;font-weight:700;text-decoration:none;font-family:'DM Sans',sans-serif;letter-spacing:0.3px;">Get in touch →</a>
+  </div>
+</div>
+  </section>
 <footer><p>© 2026 <span>Divansh Rohra</span> · Dubai, UAE</p><div class="fls"><a href="index.html">Home</a><a href="casestudies.html">Case Studies</a><a href="experience.html">Experience</a><a href="education.html">Education</a><a href="services.html">Services</a><a href="contact.html">Contact</a></div></footer>
 <script>
 // Cursor
