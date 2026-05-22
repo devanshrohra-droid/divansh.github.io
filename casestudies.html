@@ -401,6 +401,15 @@ h3.csect,
   #case3 .didg, #case4 .didg { grid-template-columns: 1fr; }
 }
 
+
+/* case3/case4 cbody solid background — prevents dark banner bleed-through */
+#case3 .cbody, #case4 .cbody {
+  background: #FFFFFF !important;
+}
+/* Fix h3 center alignment inside case cbody */
+#case3 .cbody h3, #case4 .cbody h3 {
+  text-align: left !important;
+}
 </style>
 </head>
 <body>
