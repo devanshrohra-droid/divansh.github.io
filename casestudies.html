@@ -365,6 +365,27 @@ footer span{color:var(--gold);}
 
 
 
+
+/* ── CASE CONTENT FIX ── */
+/* Override DM Serif Display (renders as caps on some systems) + center alignment */
+.case .cbody h2,
+.case .cbody h3,
+.case .cbanner h2,
+.case .cbanner h3,
+.case .csect,
+.case .ctitle {
+  font-family: "DM Sans", sans-serif !important;
+  text-align: left !important;
+  text-transform: none !important;
+  font-variant: normal !important;
+  font-weight: 600 !important;
+}
+.case .cbody *,
+.case .cbanner .cdesc,
+.case .cbanner .cco {
+  text-align: left !important;
+}
+
 </style>
 </head>
 <body>
