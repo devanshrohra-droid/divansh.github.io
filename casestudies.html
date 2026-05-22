@@ -363,39 +363,76 @@ footer span{color:var(--gold);}
 .other-card{animation:fadeUp .6s .15s cubic-bezier(.22,1,.36,1) both}
 
 
-/* ── MOBILE READABILITY FIXES ── */
-@media(max-width:768px){
-  /* Left-align everything in case cards */
-  .cbanner,.cbanner *,.cbody,.cbody *{text-align:left!important;}
-  
-  /* Boost contrast on dark banner text */
-  .cbanner .cdesc{color:rgba(255,255,255,0.80)!important;}
-  .cbanner .ctitle{font-size:20px!important;line-height:1.25!important;}
-  
-  /* More breathing room in cards */
-  .cbanner{padding:22px 18px!important;}
-  .cbody{padding:22px 16px!important;}
-  
-  /* Section headers - readable size */
-  .csect{font-size:16px!important;line-height:1.35!important;margin-bottom:10px!important;}
-  .cseclbl{font-size:10px!important;letter-spacing:1.5px!important;margin-bottom:6px!important;}
-  
-  /* Learning and feature cards - single column, more readable */
-  .learnc,.didg{display:flex!important;flex-direction:column!important;gap:10px!important;}
-  .learni{padding:14px!important;gap:12px!important;}
-  .didc{padding:14px!important;}
-  .learntxt{font-size:14px!important;line-height:1.65!important;}
-  .didd{font-size:13px!important;line-height:1.65!important;}
-  .didn{font-size:13px!important;}
-  .learnnum{font-size:17px!important;min-width:18px!important;}
-  
-  /* Body paragraphs */
-  .csec p{font-size:14px!important;line-height:1.7!important;}
-  .csec{margin-bottom:24px!important;}
-  
-  /* Tool pills wrap nicely */
-  .toolpills{gap:6px!important;}
-  .toolpill{font-size:11px!important;padding:5px 10px!important;}
+
+
+/* ══ CASE CARD MOBILE FIX ══ */
+/* Force DM Sans for ALL text inside case cards - DM Serif renders as caps on Android */
+.case .ctitle,
+.case .csect,
+.case .cseclbl,
+.case .cdesc,
+.case .cco,
+.case .cbody p,
+.case .learntxt,
+.case .didd,
+.case .didn,
+.case .toolpill {
+  font-family: "DM Sans", sans-serif !important;
+  text-transform: none !important;
+  font-variant: normal !important;
+  letter-spacing: normal !important;
+}
+
+/* Keep hierarchy through weight/size, not font */
+.case .ctitle  { font-size: 18px; font-weight: 600; line-height: 1.35; color: #FAF8F4; }
+.case .cdesc   { font-size: 14px; font-weight: 400; line-height: 1.7;  color: rgba(255,255,255,0.80); }
+.case .csect   { font-size: 15px; font-weight: 600; line-height: 1.35; color: #1A1A1A; margin-bottom: 8px; }
+.case .cseclbl { font-size: 10px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase !important; color: #B8962E; margin-bottom: 6px; display: block; }
+.case .cbody p { font-size: 14px; line-height: 1.72; color: #5A5A5A; }
+.case .learntxt{ font-size: 14px; line-height: 1.68; color: #5A5A5A; }
+.case .didd    { font-size: 13px; line-height: 1.65; color: #5A5A5A; }
+.case .didn    { font-size: 13px; font-weight: 600;  color: #1A1A1A; margin-bottom: 3px; }
+
+@media (max-width: 768px) {
+  /* Left-align everything */
+  .case, .case *, .cbanner, .cbanner *, .cbody, .cbody * {
+    text-align: left !important;
+  }
+
+  /* Breathing room */
+  .cbanner { padding: 20px 16px !important; }
+  .cbody   { padding: 20px 16px !important; }
+  .csec    { margin-bottom: 24px !important; }
+
+  /* Section headers readable */
+  .case .ctitle  { font-size: 17px !important; }
+  .case .csect   { font-size: 15px !important; }
+  .case .cbody p { font-size: 14px !important; }
+
+  /* Stack learn cards + feature cards vertically */
+  .learnc { 
+    background: none !important;
+    padding: 0 !important;
+    border: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+  .learni { 
+    padding: 14px !important; 
+    gap: 12px !important;
+    margin-bottom: 0 !important;
+    align-items: flex-start !important;
+  }
+  .didg { 
+    grid-template-columns: 1fr !important; 
+    gap: 10px !important; 
+  }
+  .didc { padding: 14px !important; }
+
+  /* Tool pills */
+  .toolpills { gap: 6px !important; }
+  .toolpill  { font-size: 11px !important; padding: 5px 10px !important; }
 }
 
 </style>
