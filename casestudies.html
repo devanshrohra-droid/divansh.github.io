@@ -362,6 +362,42 @@ footer span{color:var(--gold);}
 .job-card{animation:fadeUp .6s .10s cubic-bezier(.22,1,.36,1) both}
 .other-card{animation:fadeUp .6s .15s cubic-bezier(.22,1,.36,1) both}
 
+
+/* ── MOBILE READABILITY FIXES ── */
+@media(max-width:768px){
+  /* Left-align everything in case cards */
+  .cbanner,.cbanner *,.cbody,.cbody *{text-align:left!important;}
+  
+  /* Boost contrast on dark banner text */
+  .cbanner .cdesc{color:rgba(255,255,255,0.80)!important;}
+  .cbanner .ctitle{font-size:20px!important;line-height:1.25!important;}
+  
+  /* More breathing room in cards */
+  .cbanner{padding:22px 18px!important;}
+  .cbody{padding:22px 16px!important;}
+  
+  /* Section headers - readable size */
+  .csect{font-size:16px!important;line-height:1.35!important;margin-bottom:10px!important;}
+  .cseclbl{font-size:10px!important;letter-spacing:1.5px!important;margin-bottom:6px!important;}
+  
+  /* Learning and feature cards - single column, more readable */
+  .learnc,.didg{display:flex!important;flex-direction:column!important;gap:10px!important;}
+  .learni{padding:14px!important;gap:12px!important;}
+  .didc{padding:14px!important;}
+  .learntxt{font-size:14px!important;line-height:1.65!important;}
+  .didd{font-size:13px!important;line-height:1.65!important;}
+  .didn{font-size:13px!important;}
+  .learnnum{font-size:17px!important;min-width:18px!important;}
+  
+  /* Body paragraphs */
+  .csec p{font-size:14px!important;line-height:1.7!important;}
+  .csec{margin-bottom:24px!important;}
+  
+  /* Tool pills wrap nicely */
+  .toolpills{gap:6px!important;}
+  .toolpill{font-size:11px!important;padding:5px 10px!important;}
+}
+
 </style>
 </head>
 <body>
