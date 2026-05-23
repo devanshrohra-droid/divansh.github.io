@@ -368,42 +368,54 @@ footer span{color:var(--gold);}
 
 
 
-/* ── CASE BODY TYPOGRAPHY FIX (nuclear specificity) ── */
-/* Force DM Sans + left-align on ALL text inside case cbody sections */
-#case3 .cbody h3, #case3 .cbody h2,
-#case4 .cbody h3, #case4 .cbody h2,
-#case3 .cbanner h2, #case4 .cbanner h2,
-h3.csect, 
-#case3 .cbody *, #case4 .cbody *,
-#case3 .cbanner *, #case4 .cbanner * {
-  text-align: left !important;
+/* ── CASE BODY FIX ── */
+#case3 .cbody h2, #case3 .cbody h3,
+#case4 .cbody h2, #case4 .cbody h3 {
   font-family: "DM Sans", sans-serif !important;
+  font-weight: 600 !important;
+  text-align: left !important;
   text-transform: none !important;
   font-variant: normal !important;
+  letter-spacing: normal !important;
+  color: #1A1A1A !important;
 }
 #case3 .cbody p, #case4 .cbody p {
-  font-size: 15px;
-  line-height: 1.75;
-  color: #5A5A5A;
+  font-family: "DM Sans", sans-serif !important;
+  font-size: 15px !important;
+  line-height: 1.75 !important;
+  color: #5A5A5A !important;
+  text-align: left !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+}
+#case3 .learntxt, #case4 .learntxt,
+#case3 .didd, #case4 .didd,
+#case3 .didn, #case4 .didn {
+  font-family: "DM Sans", sans-serif !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+  text-align: left !important;
+}
+#case3 .cseclbl, #case4 .cseclbl {
+  text-align: left !important;
 }
 #case3 .csec, #case4 .csec {
-  margin-bottom: 32px;
+  margin-bottom: 32px !important;
 }
 #case3 .learnc, #case4 .learnc {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
 }
 #case3 .learni, #case4 .learni {
-  align-items: flex-start;
+  align-items: flex-start !important;
 }
 #case3 .didg, #case4 .didg {
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr) !important;
 }
-@media(max-width: 768px) {
-  #case3 .didg, #case4 .didg { grid-template-columns: 1fr; }
+@media(max-width:768px) {
+  #case3 .didg, #case4 .didg { grid-template-columns: 1fr !important; }
 }
-
 
 /* case3/case4 cbody solid background — prevents dark banner bleed-through */
 #case3 .cbody, #case4 .cbody {
