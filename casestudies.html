@@ -418,6 +418,19 @@ h3.csect,
 #case3 .cbody h3, #case4 .cbody h3 {
   text-align: left !important;
 }
+
+/* ── case3/case4 mobile cmets fix ── */
+@media(max-width:600px){
+  #case3 .cmets, #case4 .cmets {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px !important;
+  }
+  #case3 .cmet, #case4 .cmet {
+    border-right: none !important;
+    padding-right: 0 !important;
+  }
+}
 </style>
 </head>
 <body>
@@ -557,80 +570,80 @@ h3.csect,
         <div class="cmet"><div class="cmetn">0</div><div class="cmetl">Long contracts</div></div>
       </div>
     </div>
-        <div style="font-family:'DM Sans',sans-serif;background:#F3F0EA;padding:20px;display:flex;flex-direction:column;gap:12px;">
+        <div style="font-family:'DM Sans',sans-serif;background:#F3F0EA;padding:20px;display:flex;flex-direction:column;gap:12px;text-align:left;">
       <div style="background:#ffffff;border:1px solid #E8E3D9;border-radius:12px;padding:20px 22px;">
-      <span style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#B8962E;display:block;margin-bottom:8px;">The problem</span>
-      <div style="font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;color:#1A1A1A;margin-bottom:10px;line-height:1.4;text-transform:none;letter-spacing:normal;">Customers were calling to ask questions the business had already answered — just not where they were looking.</div>
-        <p style="font-family:'DM Sans',sans-serif;font-size:14px;color:#5A5A5A;line-height:1.75;margin-bottom:6px;text-transform:none;letter-spacing:normal;">At TRUXCARGO, our WhatsApp channel was the primary inbound touchpoint. The same questions came in constantly — order tracking, pickup availability, pricing, service areas. Every response was manual.</p>
-        <p style="font-family:'DM Sans',sans-serif;font-size:14px;color:#5A5A5A;line-height:1.75;margin-bottom:6px;text-transform:none;letter-spacing:normal;">Queries were spilling over to the customer service phone line — calls that didn't need to happen if the right information was surfaced at the right moment.</p>
+      <span style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#B8962E;display:block;margin-bottom:8px;text-align:left;">The problem</span>
+      <div style="font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;color:#1A1A1A;margin-bottom:10px;line-height:1.4;text-transform:none;letter-spacing:normal;text-align:left;">Customers were calling to ask questions the business had already answered — just not where they were looking.</div>
+        <p style="font-family:'DM Sans',sans-serif;font-size:14px;color:#5A5A5A;line-height:1.75;margin-bottom:6px;text-transform:none;letter-spacing:normal;text-align:left;">At TRUXCARGO, our WhatsApp channel was the primary inbound touchpoint. The same questions came in constantly — order tracking, pickup availability, pricing, service areas. Every response was manual.</p>
+        <p style="font-family:'DM Sans',sans-serif;font-size:14px;color:#5A5A5A;line-height:1.75;margin-bottom:6px;text-transform:none;letter-spacing:normal;text-align:left;">Queries were spilling over to the customer service phone line — calls that didn't need to happen if the right information was surfaced at the right moment.</p>
       </div>
       <div style="background:#ffffff;border:1px solid #E8E3D9;border-radius:12px;padding:20px 22px;">
-      <span style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#B8962E;display:block;margin-bottom:8px;">The platform journey</span>
-      <div style="font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;color:#1A1A1A;margin-bottom:10px;line-height:1.4;text-transform:none;letter-spacing:normal;">Three platforms before finding the right fit.</div>
+      <span style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#B8962E;display:block;margin-bottom:8px;text-align:left;">The platform journey</span>
+      <div style="font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;color:#1A1A1A;margin-bottom:10px;line-height:1.4;text-transform:none;letter-spacing:normal;text-align:left;">Three platforms before finding the right fit.</div>
         <div style="display:flex;flex-direction:column;gap:8px;margin-top:6px;">
           <div style="display:flex;align-items:flex-start;gap:12px;background:#F3F0EA;border-radius:8px;padding:12px 14px;">
-            <div style="font-family:'DM Sans',sans-serif;width:24px;height:24px;min-width:24px;border-radius:50%;background:#B8962E;color:#fff;font-size:11px;font-weight:600;display:flex;align-items:center;justify-content:center;">1</div>
-            <div style="font-family:'DM Sans',sans-serif;font-size:13px;color:#5A5A5A;line-height:1.65;text-transform:none;letter-spacing:normal;"><span style="font-weight:600;color:#1A1A1A;">Interakt</span> — Good for basic broadcasts but hit its ceiling quickly when we needed branching logic and conditional flows.</div>
+            <div style="font-family:'DM Sans',sans-serif;width:24px;height:24px;min-width:24px;border-radius:50%;background:#B8962E;color:#fff;font-size:11px;font-weight:600;display:flex;align-items:center;justify-content:center;text-align:left;">1</div>
+            <div style="font-family:'DM Sans',sans-serif;font-size:13px;color:#5A5A5A;line-height:1.65;text-transform:none;letter-spacing:normal;text-align:left;"><span style="font-weight:600;color:#1A1A1A;text-align:left;">Interakt</span> — Good for basic broadcasts but hit its ceiling quickly when we needed branching logic and conditional flows.</div>
           </div>
           <div style="display:flex;align-items:flex-start;gap:12px;background:#F3F0EA;border-radius:8px;padding:12px 14px;">
-            <div style="font-family:'DM Sans',sans-serif;width:24px;height:24px;min-width:24px;border-radius:50%;background:#B8962E;color:#fff;font-size:11px;font-weight:600;display:flex;align-items:center;justify-content:center;">2</div>
-            <div style="font-family:'DM Sans',sans-serif;font-size:13px;color:#5A5A5A;line-height:1.65;text-transform:none;letter-spacing:normal;"><span style="font-weight:600;color:#1A1A1A;">WATI</span> — More capable but reliability wasn't there — bots would break mid-conversation and leave users with no response.</div>
+            <div style="font-family:'DM Sans',sans-serif;width:24px;height:24px;min-width:24px;border-radius:50%;background:#B8962E;color:#fff;font-size:11px;font-weight:600;display:flex;align-items:center;justify-content:center;text-align:left;">2</div>
+            <div style="font-family:'DM Sans',sans-serif;font-size:13px;color:#5A5A5A;line-height:1.65;text-transform:none;letter-spacing:normal;text-align:left;"><span style="font-weight:600;color:#1A1A1A;text-align:left;">WATI</span> — More capable but reliability wasn't there — bots would break mid-conversation and leave users with no response.</div>
           </div>
           <div style="display:flex;align-items:flex-start;gap:12px;background:#F3F0EA;border-radius:8px;padding:12px 14px;">
-            <div style="font-family:'DM Sans',sans-serif;width:24px;height:24px;min-width:24px;border-radius:50%;background:#B8962E;color:#fff;font-size:11px;font-weight:600;display:flex;align-items:center;justify-content:center;">3</div>
-            <div style="font-family:'DM Sans',sans-serif;font-size:13px;color:#5A5A5A;line-height:1.65;text-transform:none;letter-spacing:normal;"><span style="font-weight:600;color:#1A1A1A;">DoubleTick</span> — The right call. Advanced chatbot builder, stable flows, and proper agent re-routing. This is where we built what we were trying to build.</div>
+            <div style="font-family:'DM Sans',sans-serif;width:24px;height:24px;min-width:24px;border-radius:50%;background:#B8962E;color:#fff;font-size:11px;font-weight:600;display:flex;align-items:center;justify-content:center;text-align:left;">3</div>
+            <div style="font-family:'DM Sans',sans-serif;font-size:13px;color:#5A5A5A;line-height:1.65;text-transform:none;letter-spacing:normal;text-align:left;"><span style="font-weight:600;color:#1A1A1A;text-align:left;">DoubleTick</span> — The right call. Advanced chatbot builder, stable flows, and proper agent re-routing. This is where we built what we were trying to build.</div>
           </div>
         </div>
       </div>
       <div style="background:#ffffff;border:1px solid #E8E3D9;border-radius:12px;padding:20px 22px;">
-      <span style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#B8962E;display:block;margin-bottom:8px;">What I built</span>
-      <div style="font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;color:#1A1A1A;margin-bottom:10px;line-height:1.4;text-transform:none;letter-spacing:normal;">FAQ flows, order tracking, and intelligent agent handoff.</div>
+      <span style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#B8962E;display:block;margin-bottom:8px;text-align:left;">What I built</span>
+      <div style="font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;color:#1A1A1A;margin-bottom:10px;line-height:1.4;text-transform:none;letter-spacing:normal;text-align:left;">FAQ flows, order tracking, and intelligent agent handoff.</div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px;">
           <div style="background:#F3F0EA;border-radius:8px;padding:14px;">
-            <div style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;color:#1A1A1A;margin-bottom:4px;text-transform:none;letter-spacing:normal;">FAQ automation</div>
-            <div style="font-family:'DM Sans',sans-serif;font-size:12px;color:#5A5A5A;line-height:1.6;text-transform:none;letter-spacing:normal;">Mapped common inbound queries into predefined flows with instant responses — no agent needed.</div>
+            <div style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;color:#1A1A1A;margin-bottom:4px;text-transform:none;letter-spacing:normal;text-align:left;">FAQ automation</div>
+            <div style="font-family:'DM Sans',sans-serif;font-size:12px;color:#5A5A5A;line-height:1.6;text-transform:none;letter-spacing:normal;text-align:left;">Mapped common inbound queries into predefined flows with instant responses — no agent needed.</div>
           </div>
           <div style="background:#F3F0EA;border-radius:8px;padding:14px;">
-            <div style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;color:#1A1A1A;margin-bottom:4px;text-transform:none;letter-spacing:normal;">Order tracking flow</div>
-            <div style="font-family:'DM Sans',sans-serif;font-size:12px;color:#5A5A5A;line-height:1.6;text-transform:none;letter-spacing:normal;">Customers got status updates through the bot, eliminating the main reason people called customer service.</div>
+            <div style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;color:#1A1A1A;margin-bottom:4px;text-transform:none;letter-spacing:normal;text-align:left;">Order tracking flow</div>
+            <div style="font-family:'DM Sans',sans-serif;font-size:12px;color:#5A5A5A;line-height:1.6;text-transform:none;letter-spacing:normal;text-align:left;">Customers got status updates through the bot, eliminating the main reason people called customer service.</div>
           </div>
           <div style="background:#F3F0EA;border-radius:8px;padding:14px;">
-            <div style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;color:#1A1A1A;margin-bottom:4px;text-transform:none;letter-spacing:normal;">Smart agent routing</div>
-            <div style="font-family:'DM Sans',sans-serif;font-size:12px;color:#5A5A5A;line-height:1.6;text-transform:none;letter-spacing:normal;">When a query fell outside scope, the flow routed to the right specific agent — sales to sales, ops to ops.</div>
+            <div style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;color:#1A1A1A;margin-bottom:4px;text-transform:none;letter-spacing:normal;text-align:left;">Smart agent routing</div>
+            <div style="font-family:'DM Sans',sans-serif;font-size:12px;color:#5A5A5A;line-height:1.6;text-transform:none;letter-spacing:normal;text-align:left;">When a query fell outside scope, the flow routed to the right specific agent — sales to sales, ops to ops.</div>
           </div>
           <div style="background:#F3F0EA;border-radius:8px;padding:14px;">
-            <div style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;color:#1A1A1A;margin-bottom:4px;text-transform:none;letter-spacing:normal;">Ongoing optimisation</div>
-            <div style="font-family:'DM Sans',sans-serif;font-size:12px;color:#5A5A5A;line-height:1.6;text-transform:none;letter-spacing:normal;">As bots occasionally broke, I was close enough to the system to diagnose and fix quickly.</div>
+            <div style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;color:#1A1A1A;margin-bottom:4px;text-transform:none;letter-spacing:normal;text-align:left;">Ongoing optimisation</div>
+            <div style="font-family:'DM Sans',sans-serif;font-size:12px;color:#5A5A5A;line-height:1.6;text-transform:none;letter-spacing:normal;text-align:left;">As bots occasionally broke, I was close enough to the system to diagnose and fix quickly.</div>
           </div>
         </div>
       </div>
       <div style="background:#ffffff;border:1px solid #E8E3D9;border-radius:12px;padding:20px 22px;">
-      <span style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#B8962E;display:block;margin-bottom:8px;">Impact</span>
-      <div style="font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;color:#1A1A1A;margin-bottom:10px;line-height:1.4;text-transform:none;letter-spacing:normal;">First response time dropped by over 80%. The phone stopped ringing as much.</div>
-        <p style="font-family:'DM Sans',sans-serif;font-size:14px;color:#5A5A5A;line-height:1.75;margin-bottom:6px;text-transform:none;letter-spacing:normal;">Before the bot, first response time was measured in hours. After, the bot responded in seconds — translating directly into a measurable reduction in inbound customer service calls.</p>
+      <span style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#B8962E;display:block;margin-bottom:8px;text-align:left;">Impact</span>
+      <div style="font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;color:#1A1A1A;margin-bottom:10px;line-height:1.4;text-transform:none;letter-spacing:normal;text-align:left;">First response time dropped by over 80%. The phone stopped ringing as much.</div>
+        <p style="font-family:'DM Sans',sans-serif;font-size:14px;color:#5A5A5A;line-height:1.75;margin-bottom:6px;text-transform:none;letter-spacing:normal;text-align:left;">Before the bot, first response time was measured in hours. After, the bot responded in seconds — translating directly into a measurable reduction in inbound customer service calls.</p>
       </div>
       <div style="background:#ffffff;border:1px solid #E8E3D9;border-radius:12px;padding:20px 22px;">
-      <span style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#B8962E;display:block;margin-bottom:8px;">What this built in me</span>
-      <div style="font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;color:#1A1A1A;margin-bottom:10px;line-height:1.4;text-transform:none;letter-spacing:normal;">Learning a new technology end-to-end — and staying ahead when it breaks.</div>
+      <span style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#B8962E;display:block;margin-bottom:8px;text-align:left;">What this built in me</span>
+      <div style="font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;color:#1A1A1A;margin-bottom:10px;line-height:1.4;text-transform:none;letter-spacing:normal;text-align:left;">Learning a new technology end-to-end — and staying ahead when it breaks.</div>
         <div style="display:flex;flex-direction:column;gap:8px;margin-top:6px;">
           <div style="display:flex;align-items:flex-start;gap:12px;background:#F3F0EA;border-radius:8px;padding:12px 14px;">
-            <div style="font-family:'DM Sans',sans-serif;width:24px;height:24px;min-width:24px;border-radius:50%;background:#B8962E;color:#fff;font-size:11px;font-weight:600;display:flex;align-items:center;justify-content:center;">1</div>
-            <div style="font-family:'DM Sans',sans-serif;font-size:13px;color:#5A5A5A;line-height:1.65;text-transform:none;letter-spacing:normal;"><span style="font-weight:600;color:#1A1A1A;">Platform-switching isn't failure — it's iteration.</span> Moving from Interakt to WATI to DoubleTick wasn't wasted effort. Each taught me what the right solution needed to do.</div>
+            <div style="font-family:'DM Sans',sans-serif;width:24px;height:24px;min-width:24px;border-radius:50%;background:#B8962E;color:#fff;font-size:11px;font-weight:600;display:flex;align-items:center;justify-content:center;text-align:left;">1</div>
+            <div style="font-family:'DM Sans',sans-serif;font-size:13px;color:#5A5A5A;line-height:1.65;text-transform:none;letter-spacing:normal;text-align:left;"><span style="font-weight:600;color:#1A1A1A;text-align:left;">Platform-switching isn't failure — it's iteration.</span> Moving from Interakt to WATI to DoubleTick wasn't wasted effort. Each taught me what the right solution needed to do.</div>
           </div>
           <div style="display:flex;align-items:flex-start;gap:12px;background:#F3F0EA;border-radius:8px;padding:12px 14px;">
-            <div style="font-family:'DM Sans',sans-serif;width:24px;height:24px;min-width:24px;border-radius:50%;background:#B8962E;color:#fff;font-size:11px;font-weight:600;display:flex;align-items:center;justify-content:center;">2</div>
-            <div style="font-family:'DM Sans',sans-serif;font-size:13px;color:#5A5A5A;line-height:1.65;text-transform:none;letter-spacing:normal;"><span style="font-weight:600;color:#1A1A1A;">Automation systems need an owner, not just a builder.</span> The bots broke. What mattered was I understood the system well enough to fix it fast.</div>
+            <div style="font-family:'DM Sans',sans-serif;width:24px;height:24px;min-width:24px;border-radius:50%;background:#B8962E;color:#fff;font-size:11px;font-weight:600;display:flex;align-items:center;justify-content:center;text-align:left;">2</div>
+            <div style="font-family:'DM Sans',sans-serif;font-size:13px;color:#5A5A5A;line-height:1.65;text-transform:none;letter-spacing:normal;text-align:left;"><span style="font-weight:600;color:#1A1A1A;text-align:left;">Automation systems need an owner, not just a builder.</span> The bots broke. What mattered was I understood the system well enough to fix it fast.</div>
           </div>
           <div style="display:flex;align-items:flex-start;gap:12px;background:#F3F0EA;border-radius:8px;padding:12px 14px;">
-            <div style="font-family:'DM Sans',sans-serif;width:24px;height:24px;min-width:24px;border-radius:50%;background:#B8962E;color:#fff;font-size:11px;font-weight:600;display:flex;align-items:center;justify-content:center;">3</div>
-            <div style="font-family:'DM Sans',sans-serif;font-size:13px;color:#5A5A5A;line-height:1.65;text-transform:none;letter-spacing:normal;"><span style="font-weight:600;color:#1A1A1A;">The best automation removes friction customers didn't tell you about.</span> Nobody asked for WhatsApp order tracking — but the call volume told the story.</div>
+            <div style="font-family:'DM Sans',sans-serif;width:24px;height:24px;min-width:24px;border-radius:50%;background:#B8962E;color:#fff;font-size:11px;font-weight:600;display:flex;align-items:center;justify-content:center;text-align:left;">3</div>
+            <div style="font-family:'DM Sans',sans-serif;font-size:13px;color:#5A5A5A;line-height:1.65;text-transform:none;letter-spacing:normal;text-align:left;"><span style="font-weight:600;color:#1A1A1A;text-align:left;">The best automation removes friction customers didn't tell you about.</span> Nobody asked for WhatsApp order tracking — but the call volume told the story.</div>
           </div>
         </div>
       </div>
       <div style="background:#ffffff;border:1px solid #E8E3D9;border-radius:12px;padding:20px 22px;">
-      <span style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#B8962E;display:block;margin-bottom:8px;">Stack</span>
-      <div style="font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;color:#1A1A1A;margin-bottom:10px;line-height:1.4;text-transform:none;letter-spacing:normal;"></div>
-        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;"><span style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;padding:4px 10px;border-radius:20px;border:1px solid #E8E3D9;color:#5A5A5A;background:#fff;text-transform:none;letter-spacing:normal;">DoubleTick</span><span style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;padding:4px 10px;border-radius:20px;border:1px solid #E8E3D9;color:#5A5A5A;background:#fff;text-transform:none;letter-spacing:normal;">WATI</span><span style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;padding:4px 10px;border-radius:20px;border:1px solid #E8E3D9;color:#5A5A5A;background:#fff;text-transform:none;letter-spacing:normal;">Interakt</span><span style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;padding:4px 10px;border-radius:20px;border:1px solid #E8E3D9;color:#5A5A5A;background:#fff;text-transform:none;letter-spacing:normal;">WhatsApp Business API</span><span style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;padding:4px 10px;border-radius:20px;border:1px solid #E8E3D9;color:#5A5A5A;background:#fff;text-transform:none;letter-spacing:normal;">Chatbot flow design</span><span style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;padding:4px 10px;border-radius:20px;border:1px solid #E8E3D9;color:#5A5A5A;background:#fff;text-transform:none;letter-spacing:normal;">Agent routing</span></div>
+      <span style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#B8962E;display:block;margin-bottom:8px;text-align:left;">Stack</span>
+      <div style="font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;color:#1A1A1A;margin-bottom:10px;line-height:1.4;text-transform:none;letter-spacing:normal;text-align:left;"></div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;"><span style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;padding:4px 10px;border-radius:20px;border:1px solid #E8E3D9;color:#5A5A5A;background:#fff;text-transform:none;letter-spacing:normal;text-align:left;">DoubleTick</span><span style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;padding:4px 10px;border-radius:20px;border:1px solid #E8E3D9;color:#5A5A5A;background:#fff;text-transform:none;letter-spacing:normal;text-align:left;">WATI</span><span style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;padding:4px 10px;border-radius:20px;border:1px solid #E8E3D9;color:#5A5A5A;background:#fff;text-transform:none;letter-spacing:normal;text-align:left;">Interakt</span><span style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;padding:4px 10px;border-radius:20px;border:1px solid #E8E3D9;color:#5A5A5A;background:#fff;text-transform:none;letter-spacing:normal;text-align:left;">WhatsApp Business API</span><span style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;padding:4px 10px;border-radius:20px;border:1px solid #E8E3D9;color:#5A5A5A;background:#fff;text-transform:none;letter-spacing:normal;text-align:left;">Chatbot flow design</span><span style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;padding:4px 10px;border-radius:20px;border:1px solid #E8E3D9;color:#5A5A5A;background:#fff;text-transform:none;letter-spacing:normal;text-align:left;">Agent routing</span></div>
       </div>
     </div>
   </div>
@@ -651,75 +664,75 @@ h3.csect,
         <div class="cmet"><div class="cmetn">0</div><div class="cmetl">Dev experience</div></div>
       </div>
     </div>
-        <div style="font-family:'DM Sans',sans-serif;background:#F3F0EA;padding:20px;display:flex;flex-direction:column;gap:12px;">
+        <div style="font-family:'DM Sans',sans-serif;background:#F3F0EA;padding:20px;display:flex;flex-direction:column;gap:12px;text-align:left;">
       <div style="background:#ffffff;border:1px solid #E8E3D9;border-radius:12px;padding:20px 22px;">
-      <span style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#B8962E;display:block;margin-bottom:8px;">The background</span>
-      <div style="font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;color:#1A1A1A;margin-bottom:10px;line-height:1.4;text-transform:none;letter-spacing:normal;">Nine years of finding reels, writing captions, and posting manually. On a quiet Tuesday, I decided to change that.</div>
-        <p style="font-family:'DM Sans',sans-serif;font-size:14px;color:#5A5A5A;line-height:1.75;margin-bottom:6px;text-transform:none;letter-spacing:normal;">I've been running <span style="font-weight:600;color:#1A1A1A;">@modifiedwhipss</span> on Instagram since 2017. Finding modified Indian car reels, downloading them, writing captions, crediting creators, and posting — all manually, every time.</p>
-        <p style="font-family:'DM Sans',sans-serif;font-size:14px;color:#5A5A5A;line-height:1.75;margin-bottom:6px;text-transform:none;letter-spacing:normal;">I'm a Digital Marketing professional. I use AI tools every day at work — Claude, ChatGPT, Gemini. But I'd never actually built anything myself. So I spent a week trying to change that: 6 hours a day, every day.</p>
+      <span style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#B8962E;display:block;margin-bottom:8px;text-align:left;">The background</span>
+      <div style="font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;color:#1A1A1A;margin-bottom:10px;line-height:1.4;text-transform:none;letter-spacing:normal;text-align:left;">Nine years of finding reels, writing captions, and posting manually. On a quiet Tuesday, I decided to change that.</div>
+        <p style="font-family:'DM Sans',sans-serif;font-size:14px;color:#5A5A5A;line-height:1.75;margin-bottom:6px;text-transform:none;letter-spacing:normal;text-align:left;">I've been running <span style="font-weight:600;color:#1A1A1A;text-align:left;">@modifiedwhipss</span> on Instagram since 2017. Finding modified Indian car reels, downloading them, writing captions, crediting creators, and posting — all manually, every time.</p>
+        <p style="font-family:'DM Sans',sans-serif;font-size:14px;color:#5A5A5A;line-height:1.75;margin-bottom:6px;text-transform:none;letter-spacing:normal;text-align:left;">I'm a Digital Marketing professional. I use AI tools every day at work — Claude, ChatGPT, Gemini. But I'd never actually built anything myself. So I spent a week trying to change that: 6 hours a day, every day.</p>
       </div>
       <div style="background:#ffffff;border:1px solid #E8E3D9;border-radius:12px;padding:20px 22px;">
-      <span style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#B8962E;display:block;margin-bottom:8px;">The build (and the problems)</span>
-      <div style="font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;color:#1A1A1A;margin-bottom:10px;line-height:1.4;text-transform:none;letter-spacing:normal;">It did not take one day.</div>
+      <span style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#B8962E;display:block;margin-bottom:8px;text-align:left;">The build (and the problems)</span>
+      <div style="font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;color:#1A1A1A;margin-bottom:10px;line-height:1.4;text-transform:none;letter-spacing:normal;text-align:left;">It did not take one day.</div>
         <div style="display:flex;flex-direction:column;gap:8px;margin-top:6px;">
           <div style="display:flex;align-items:flex-start;gap:12px;background:#F3F0EA;border-radius:8px;padding:12px 14px;">
-            <div style="font-family:'DM Sans',sans-serif;width:24px;height:24px;min-width:24px;border-radius:50%;background:#B8962E;color:#fff;font-size:11px;font-weight:600;display:flex;align-items:center;justify-content:center;">1</div>
-            <div style="font-family:'DM Sans',sans-serif;font-size:13px;color:#5A5A5A;line-height:1.65;text-transform:none;letter-spacing:normal;"><span style="font-weight:600;color:#1A1A1A;">Instagram blocks every cloud server.</span> 401 errors everywhere. Sessions, cookies, proxies — all blocked. Two days gone just trying to download a reel.</div>
+            <div style="font-family:'DM Sans',sans-serif;width:24px;height:24px;min-width:24px;border-radius:50%;background:#B8962E;color:#fff;font-size:11px;font-weight:600;display:flex;align-items:center;justify-content:center;text-align:left;">1</div>
+            <div style="font-family:'DM Sans',sans-serif;font-size:13px;color:#5A5A5A;line-height:1.65;text-transform:none;letter-spacing:normal;text-align:left;"><span style="font-weight:600;color:#1A1A1A;text-align:left;">Instagram blocks every cloud server.</span> 401 errors everywhere. Sessions, cookies, proxies — all blocked. Two days gone just trying to download a reel.</div>
           </div>
           <div style="display:flex;align-items:flex-start;gap:12px;background:#F3F0EA;border-radius:8px;padding:12px 14px;">
-            <div style="font-family:'DM Sans',sans-serif;width:24px;height:24px;min-width:24px;border-radius:50%;background:#B8962E;color:#fff;font-size:11px;font-weight:600;display:flex;align-items:center;justify-content:center;">2</div>
-            <div style="font-family:'DM Sans',sans-serif;font-size:13px;color:#5A5A5A;line-height:1.65;text-transform:none;letter-spacing:normal;"><span style="font-weight:600;color:#1A1A1A;">Video format issues.</span> Instagram delivers video and audio as separate streams. Merging them required a tool that refused to install on the server.</div>
+            <div style="font-family:'DM Sans',sans-serif;width:24px;height:24px;min-width:24px;border-radius:50%;background:#B8962E;color:#fff;font-size:11px;font-weight:600;display:flex;align-items:center;justify-content:center;text-align:left;">2</div>
+            <div style="font-family:'DM Sans',sans-serif;font-size:13px;color:#5A5A5A;line-height:1.65;text-transform:none;letter-spacing:normal;text-align:left;"><span style="font-weight:600;color:#1A1A1A;text-align:left;">Video format issues.</span> Instagram delivers video and audio as separate streams. Merging them required a tool that refused to install on the server.</div>
           </div>
           <div style="display:flex;align-items:flex-start;gap:12px;background:#F3F0EA;border-radius:8px;padding:12px 14px;">
-            <div style="font-family:'DM Sans',sans-serif;width:24px;height:24px;min-width:24px;border-radius:50%;background:#B8962E;color:#fff;font-size:11px;font-weight:600;display:flex;align-items:center;justify-content:center;">3</div>
-            <div style="font-family:'DM Sans',sans-serif;font-size:13px;color:#5A5A5A;line-height:1.65;text-transform:none;letter-spacing:normal;"><span style="font-weight:600;color:#1A1A1A;">AI captions were terrible until I rewrote the prompts.</span> Generic, robotic, wrong tone. Prompt engineering mattered more than the model.</div>
+            <div style="font-family:'DM Sans',sans-serif;width:24px;height:24px;min-width:24px;border-radius:50%;background:#B8962E;color:#fff;font-size:11px;font-weight:600;display:flex;align-items:center;justify-content:center;text-align:left;">3</div>
+            <div style="font-family:'DM Sans',sans-serif;font-size:13px;color:#5A5A5A;line-height:1.65;text-transform:none;letter-spacing:normal;text-align:left;"><span style="font-weight:600;color:#1A1A1A;text-align:left;">AI captions were terrible until I rewrote the prompts.</span> Generic, robotic, wrong tone. Prompt engineering mattered more than the model.</div>
           </div>
           <div style="display:flex;align-items:flex-start;gap:12px;background:#F3F0EA;border-radius:8px;padding:12px 14px;">
-            <div style="font-family:'DM Sans',sans-serif;width:24px;height:24px;min-width:24px;border-radius:50%;background:#B8962E;color:#fff;font-size:11px;font-weight:600;display:flex;align-items:center;justify-content:center;">4</div>
-            <div style="font-family:'DM Sans',sans-serif;font-size:13px;color:#5A5A5A;line-height:1.65;text-transform:none;letter-spacing:normal;"><span style="font-weight:600;color:#1A1A1A;">The bot crashed when two instances ran simultaneously.</span> Fixed with a lock file — but it took hours to diagnose.</div>
+            <div style="font-family:'DM Sans',sans-serif;width:24px;height:24px;min-width:24px;border-radius:50%;background:#B8962E;color:#fff;font-size:11px;font-weight:600;display:flex;align-items:center;justify-content:center;text-align:left;">4</div>
+            <div style="font-family:'DM Sans',sans-serif;font-size:13px;color:#5A5A5A;line-height:1.65;text-transform:none;letter-spacing:normal;text-align:left;"><span style="font-weight:600;color:#1A1A1A;text-align:left;">The bot crashed when two instances ran simultaneously.</span> Fixed with a lock file — but it took hours to diagnose.</div>
           </div>
         </div>
       </div>
       <div style="background:#ffffff;border:1px solid #E8E3D9;border-radius:12px;padding:20px 22px;">
-      <span style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#B8962E;display:block;margin-bottom:8px;">How it works now</span>
-      <div style="font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;color:#1A1A1A;margin-bottom:10px;line-height:1.4;text-transform:none;letter-spacing:normal;">Paste a link. Get a caption. Approve. Post.</div>
+      <span style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#B8962E;display:block;margin-bottom:8px;text-align:left;">How it works now</span>
+      <div style="font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;color:#1A1A1A;margin-bottom:10px;line-height:1.4;text-transform:none;letter-spacing:normal;text-align:left;">Paste a link. Get a caption. Approve. Post.</div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px;">
           <div style="background:#F3F0EA;border-radius:8px;padding:14px;">
-            <div style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;color:#1A1A1A;margin-bottom:4px;text-transform:none;letter-spacing:normal;">Paste a link in Telegram</div>
-            <div style="font-family:'DM Sans',sans-serif;font-size:12px;color:#5A5A5A;line-height:1.6;text-transform:none;letter-spacing:normal;">Drop any Instagram reel link into the bot — it downloads the video automatically.</div>
+            <div style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;color:#1A1A1A;margin-bottom:4px;text-transform:none;letter-spacing:normal;text-align:left;">Paste a link in Telegram</div>
+            <div style="font-family:'DM Sans',sans-serif;font-size:12px;color:#5A5A5A;line-height:1.6;text-transform:none;letter-spacing:normal;text-align:left;">Drop any Instagram reel link into the bot — it downloads the video automatically.</div>
           </div>
           <div style="background:#F3F0EA;border-radius:8px;padding:14px;">
-            <div style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;color:#1A1A1A;margin-bottom:4px;text-transform:none;letter-spacing:normal;">Claude AI writes the caption</div>
-            <div style="font-family:'DM Sans',sans-serif;font-size:12px;color:#5A5A5A;line-height:1.6;text-transform:none;letter-spacing:normal;">Credits the original creator, adds the follow line, matches the account tone.</div>
+            <div style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;color:#1A1A1A;margin-bottom:4px;text-transform:none;letter-spacing:normal;text-align:left;">Claude AI writes the caption</div>
+            <div style="font-family:'DM Sans',sans-serif;font-size:12px;color:#5A5A5A;line-height:1.6;text-transform:none;letter-spacing:normal;text-align:left;">Credits the original creator, adds the follow line, matches the account tone.</div>
           </div>
           <div style="background:#F3F0EA;border-radius:8px;padding:14px;">
-            <div style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;color:#1A1A1A;margin-bottom:4px;text-transform:none;letter-spacing:normal;">One-tap approval</div>
-            <div style="font-family:'DM Sans',sans-serif;font-size:12px;color:#5A5A5A;line-height:1.6;text-transform:none;letter-spacing:normal;">Review the caption and tap approve. Edit if needed, or just type /postnow.</div>
+            <div style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;color:#1A1A1A;margin-bottom:4px;text-transform:none;letter-spacing:normal;text-align:left;">One-tap approval</div>
+            <div style="font-family:'DM Sans',sans-serif;font-size:12px;color:#5A5A5A;line-height:1.6;text-transform:none;letter-spacing:normal;text-align:left;">Review the caption and tap approve. Edit if needed, or just type /postnow.</div>
           </div>
           <div style="background:#F3F0EA;border-radius:8px;padding:14px;">
-            <div style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;color:#1A1A1A;margin-bottom:4px;text-transform:none;letter-spacing:normal;">Posts to Instagram</div>
-            <div style="font-family:'DM Sans',sans-serif;font-size:12px;color:#5A5A5A;line-height:1.6;text-transform:none;letter-spacing:normal;">The bot posts the reel with caption and tags — in seconds. No phone. No app.</div>
+            <div style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;color:#1A1A1A;margin-bottom:4px;text-transform:none;letter-spacing:normal;text-align:left;">Posts to Instagram</div>
+            <div style="font-family:'DM Sans',sans-serif;font-size:12px;color:#5A5A5A;line-height:1.6;text-transform:none;letter-spacing:normal;text-align:left;">The bot posts the reel with caption and tags — in seconds. No phone. No app.</div>
           </div>
         </div>
       </div>
       <div style="background:#ffffff;border:1px solid #E8E3D9;border-radius:12px;padding:20px 22px;">
-      <span style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#B8962E;display:block;margin-bottom:8px;">The real learning</span>
-      <div style="font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;color:#1A1A1A;margin-bottom:10px;line-height:1.4;text-transform:none;letter-spacing:normal;">I spent months telling brands to automate. Now I understand the gap between strategy and execution.</div>
-        <p style="font-family:'DM Sans',sans-serif;font-size:14px;color:#5A5A5A;line-height:1.75;margin-bottom:6px;text-transform:none;letter-spacing:normal;">Production breaks differently than planning. Error logs at 2am teach you more than any course. The bottleneck is never what you expect. The fact that I — a non-developer — built a working pipeline means the barrier to building is lower than most marketers think.</p>
+      <span style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#B8962E;display:block;margin-bottom:8px;text-align:left;">The real learning</span>
+      <div style="font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;color:#1A1A1A;margin-bottom:10px;line-height:1.4;text-transform:none;letter-spacing:normal;text-align:left;">I spent months telling brands to automate. Now I understand the gap between strategy and execution.</div>
+        <p style="font-family:'DM Sans',sans-serif;font-size:14px;color:#5A5A5A;line-height:1.75;margin-bottom:6px;text-transform:none;letter-spacing:normal;text-align:left;">Production breaks differently than planning. Error logs at 2am teach you more than any course. The bottleneck is never what you expect. The fact that I — a non-developer — built a working pipeline means the barrier to building is lower than most marketers think.</p>
       </div>
       <div style="background:#ffffff;border:1px solid #E8E3D9;border-radius:12px;padding:20px 22px;">
-      <span style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#B8962E;display:block;margin-bottom:8px;">Stack</span>
-      <div style="font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;color:#1A1A1A;margin-bottom:10px;line-height:1.4;text-transform:none;letter-spacing:normal;"></div>
-        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;"><span style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;padding:4px 10px;border-radius:20px;border:1px solid #E8E3D9;color:#5A5A5A;background:#fff;text-transform:none;letter-spacing:normal;">Python</span><span style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;padding:4px 10px;border-radius:20px;border:1px solid #E8E3D9;color:#5A5A5A;background:#fff;text-transform:none;letter-spacing:normal;">Telegram Bot</span><span style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;padding:4px 10px;border-radius:20px;border:1px solid #E8E3D9;color:#5A5A5A;background:#fff;text-transform:none;letter-spacing:normal;">Claude AI</span><span style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;padding:4px 10px;border-radius:20px;border:1px solid #E8E3D9;color:#5A5A5A;background:#fff;text-transform:none;letter-spacing:normal;">RapidAPI</span><span style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;padding:4px 10px;border-radius:20px;border:1px solid #E8E3D9;color:#5A5A5A;background:#fff;text-transform:none;letter-spacing:normal;">Cloudinary</span><span style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;padding:4px 10px;border-radius:20px;border:1px solid #E8E3D9;color:#5A5A5A;background:#fff;text-transform:none;letter-spacing:normal;">Make</span><span style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;padding:4px 10px;border-radius:20px;border:1px solid #E8E3D9;color:#5A5A5A;background:#fff;text-transform:none;letter-spacing:normal;">Railway</span><span style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;padding:4px 10px;border-radius:20px;border:1px solid #E8E3D9;color:#5A5A5A;background:#fff;text-transform:none;letter-spacing:normal;">Cloudflare</span></div>
+      <span style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#B8962E;display:block;margin-bottom:8px;text-align:left;">Stack</span>
+      <div style="font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;color:#1A1A1A;margin-bottom:10px;line-height:1.4;text-transform:none;letter-spacing:normal;text-align:left;"></div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;"><span style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;padding:4px 10px;border-radius:20px;border:1px solid #E8E3D9;color:#5A5A5A;background:#fff;text-transform:none;letter-spacing:normal;text-align:left;">Python</span><span style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;padding:4px 10px;border-radius:20px;border:1px solid #E8E3D9;color:#5A5A5A;background:#fff;text-transform:none;letter-spacing:normal;text-align:left;">Telegram Bot</span><span style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;padding:4px 10px;border-radius:20px;border:1px solid #E8E3D9;color:#5A5A5A;background:#fff;text-transform:none;letter-spacing:normal;text-align:left;">Claude AI</span><span style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;padding:4px 10px;border-radius:20px;border:1px solid #E8E3D9;color:#5A5A5A;background:#fff;text-transform:none;letter-spacing:normal;text-align:left;">RapidAPI</span><span style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;padding:4px 10px;border-radius:20px;border:1px solid #E8E3D9;color:#5A5A5A;background:#fff;text-transform:none;letter-spacing:normal;text-align:left;">Cloudinary</span><span style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;padding:4px 10px;border-radius:20px;border:1px solid #E8E3D9;color:#5A5A5A;background:#fff;text-transform:none;letter-spacing:normal;text-align:left;">Make</span><span style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;padding:4px 10px;border-radius:20px;border:1px solid #E8E3D9;color:#5A5A5A;background:#fff;text-transform:none;letter-spacing:normal;text-align:left;">Railway</span><span style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;padding:4px 10px;border-radius:20px;border:1px solid #E8E3D9;color:#5A5A5A;background:#fff;text-transform:none;letter-spacing:normal;text-align:left;">Cloudflare</span></div>
       </div>
     </div>
   </div>
 
 <div style="position:relative;background:linear-gradient(135deg,#1A1A1A,#0A0A0A);border:1px solid rgba(184,150,46,0.4);border-radius:18px;padding:44px 36px;text-align:center;margin-top:28px;box-shadow:0 0 60px rgba(184,150,46,0.12),inset 0 1px 0 rgba(184,150,46,0.2);text-transform:none;">
     <div style="position:absolute;top:0;left:50%;transform:translateX(-50%);width:55%;height:1px;background:linear-gradient(90deg,transparent,rgba(184,150,46,0.7),transparent);text-transform:none;"></div>
-    <div style="display:inline-block;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#B8962E;background:rgba(184,150,46,0.12);border:1px solid rgba(184,150,46,0.3);padding:5px 14px;border-radius:20px;margin-bottom:16px;">Open to new roles</div><h3 style="font-family:'DM Serif Display',serif;font-size:28px;color:#FFFFFF;margin-bottom:12px;line-height:1.2;font-weight:400;text-transform:none;">Want results like these<br>for your brand?</h3>
+    <div style="display:inline-block;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#B8962E;background:rgba(184,150,46,0.12);border:1px solid rgba(184,150,46,0.3);padding:5px 14px;border-radius:20px;margin-bottom:16px;text-align:left;">Open to new roles</div><h3 style="font-family:'DM Serif Display',serif;font-size:28px;color:#FFFFFF;margin-bottom:12px;line-height:1.2;font-weight:400;text-transform:none;">Want results like these<br>for your brand?</h3>
     <p style="font-size:15px;color:rgba(255,255,255,0.6);margin-bottom:28px;line-height:1.75;max-width:440px;margin-left:auto;margin-right:auto;text-transform:none;">Available for Digital Marketing Executive roles in Dubai and open to freelance projects across F&amp;B, retail, and e-commerce.</p>
-    <a href="contact.html" style="display:inline-block;padding:15px 40px;background:#B8962E;color:#1A1A1A;border-radius:8px;font-size:15px;font-weight:700;text-decoration:none;font-family:'DM Sans',sans-serif;letter-spacing:0.3px;text-transform:none;">Get in touch →</a>
+    <a href="contact.html" style="display:inline-block;padding:15px 40px;background:#B8962E;color:#1A1A1A;border-radius:8px;font-size:15px;font-weight:700;text-decoration:none;font-family:'DM Sans',sans-serif;letter-spacing:0.3px;text-transform:none;text-align:left;">Get in touch →</a>
   </div>
 </div>
 </section>
