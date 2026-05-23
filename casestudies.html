@@ -377,6 +377,9 @@ h3.csect,
 #case3 .cbody *, #case4 .cbody *,
 #case3 .cbanner *, #case4 .cbanner * {
   text-align: left !important;
+  font-family: "DM Sans", sans-serif !important;
+  text-transform: none !important;
+  font-variant: normal !important;
 }
 #case3 .cbody p, #case4 .cbody p {
   font-size: 15px;
@@ -405,6 +408,11 @@ h3.csect,
 /* case3/case4 cbody solid background — prevents dark banner bleed-through */
 #case3 .cbody, #case4 .cbody {
   background: #FFFFFF !important;
+  position: relative;
+  z-index: 1;
+}
+#case3, #case4 {
+  isolation: isolate;
 }
 /* Fix h3 center alignment inside case cbody */
 #case3 .cbody h3, #case4 .cbody h3 {
