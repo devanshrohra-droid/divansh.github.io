@@ -431,6 +431,39 @@ h3.csect,
     padding-right: 0 !important;
   }
 }
+
+/* ── case3/case4 background fix — prevents dark-banner bleed-through ── */
+#case3, #case4 {
+  background: #FAF8F4 !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+/* ── feature grid: 2-col desktop → 1-col mobile ── */
+.case-fg {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 6px;
+}
+@media(max-width:600px) {
+  .case-fg { grid-template-columns: 1fr !important; }
+  .case-fg > div { padding: 12px !important; }
+}
+/* ── cmets 2×2 grid on mobile (enhanced) ── */
+@media(max-width:600px){
+  #case3 .cmets, #case4 .cmets {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 16px !important;
+    flex-wrap: nowrap !important;
+  }
+  #case3 .cmet, #case4 .cmet {
+    border-right: none !important;
+    padding-right: 0 !important;
+    flex: none !important;
+    min-width: 0 !important;
+  }
+}
 </style>
 </head>
 <body>
@@ -598,7 +631,7 @@ h3.csect,
       <div style="background:#ffffff;border:1px solid #E8E3D9;border-radius:12px;padding:20px 22px;">
       <span style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#B8962E;display:block;margin-bottom:8px;text-align:left;">What I built</span>
       <div style="font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;color:#1A1A1A;margin-bottom:10px;line-height:1.4;text-transform:none;letter-spacing:normal;text-align:left;">FAQ flows, order tracking, and intelligent agent handoff.</div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px;">
+        <div class="case-fg" style="display:grid;gap:10px;margin-top:6px;">
           <div style="background:#F3F0EA;border-radius:8px;padding:14px;">
             <div style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;color:#1A1A1A;margin-bottom:4px;text-transform:none;letter-spacing:normal;text-align:left;">FAQ automation</div>
             <div style="font-family:'DM Sans',sans-serif;font-size:12px;color:#5A5A5A;line-height:1.6;text-transform:none;letter-spacing:normal;text-align:left;">Mapped common inbound queries into predefined flows with instant responses — no agent needed.</div>
@@ -696,7 +729,7 @@ h3.csect,
       <div style="background:#ffffff;border:1px solid #E8E3D9;border-radius:12px;padding:20px 22px;">
       <span style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#B8962E;display:block;margin-bottom:8px;text-align:left;">How it works now</span>
       <div style="font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;color:#1A1A1A;margin-bottom:10px;line-height:1.4;text-transform:none;letter-spacing:normal;text-align:left;">Paste a link. Get a caption. Approve. Post.</div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px;">
+        <div class="case-fg" style="display:grid;gap:10px;margin-top:6px;">
           <div style="background:#F3F0EA;border-radius:8px;padding:14px;">
             <div style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;color:#1A1A1A;margin-bottom:4px;text-transform:none;letter-spacing:normal;text-align:left;">Paste a link in Telegram</div>
             <div style="font-family:'DM Sans',sans-serif;font-size:12px;color:#5A5A5A;line-height:1.6;text-transform:none;letter-spacing:normal;text-align:left;">Drop any Instagram reel link into the bot — it downloads the video automatically.</div>
