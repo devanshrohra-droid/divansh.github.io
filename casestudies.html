@@ -472,8 +472,8 @@ h3.csect,
   /* cmets: handle long values like "DoubleTick" */
   .cmetn { font-size: 18px !important; word-break: break-word !important; }
   .cmet { min-width: 60px !important; }
-  /* Remove section side padding so cards reach near screen edges (no black bars) */
-  #case3.sec, #case4.sec { padding-left: 0 !important; padding-right: 0 !important; }
+  /* Remove wrapper side padding so cards reach near screen edges (no black bars) */
+  .case-group { padding-left: 0 !important; padding-right: 0 !important; border-radius: 0 !important; border-left: none !important; border-right: none !important; }
   /* Font weight: match site-wide body text (300) */
   #case3 .cdesc, #case4 .cdesc { font-weight: 300 !important; }
   #case3 .cbody p, #case4 .cbody p { font-weight: 300 !important; }
@@ -599,7 +599,7 @@ h3.csect,
     </div>
   </div>
 
-  <div style="position:relative;background:linear-gradient(135deg,#1A1A1A,#0A0A0A);border:1px solid rgba(184,150,46,0.4);border-radius:18px;padding:44px 36px;text-align:center;margin-top:28px;box-shadow:0 0 60px rgba(184,150,46,0.12),inset 0 1px 0 rgba(184,150,46,0.2);">
+  <div class="case-group" style="position:relative;background:linear-gradient(135deg,#1A1A1A,#0A0A0A);border:1px solid rgba(184,150,46,0.4);border-radius:18px;padding:44px 36px;text-align:center;margin-top:28px;box-shadow:0 0 60px rgba(184,150,46,0.12),inset 0 1px 0 rgba(184,150,46,0.2);">
     <div style="position:absolute;top:0;left:50%;transform:translateX(-50%);width:55%;height:1px;background:linear-gradient(90deg,transparent,rgba(184,150,46,0.7),transparent);"></div>
     <div style="display:inline-block;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#B8962E;background:rgba(184,150,46,0.12);border:1px solid rgba(184,150,46,0.3);padding:5p        <div class="case reveal" id="case3">
     <div class="cbanner dark">
