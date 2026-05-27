@@ -239,7 +239,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:9000;height:64px;padding:0 5%;di
 .fok{display:none;margin-top:10px;padding:12px;background:var(--gl);border:1px solid var(--gb);border-radius:7px;text-align:center;font-size:14px;color:var(--gold);font-weight:500;}
 
 /* CASE STUDIES */
-.case{background:var(--glass);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--glb);border-radius:20px;overflow:hidden;margin-bottom:26px;box-shadow:0 6px 26px rgba(0,0,0,0.06);}
+.case{background:var(--glass);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--glb);border-radius:20px;overflow:hidden;margin-bottom:44px;box-shadow:0 6px 26px rgba(0,0,0,0.06);}
 .cbanner{padding:36px;}
 .cbanner.gold{background:linear-gradient(135deg,#5A3D08,#9A7520);}
 .cbanner.dark{background:linear-gradient(135deg,#141414,#2A2A2A);}
@@ -436,7 +436,7 @@ h3.csect,
   background: #FAF8F4 !important;
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
-  letter-spacing: 0;
+  letter-spacing: 0 !important;
 }
 /* ── case-group wrapper: transparent at ALL sizes so case3/4 match case1/2 ── */
 .case-group {
@@ -447,9 +447,21 @@ h3.csect,
   border-radius: 0 !important;
   margin-top: 0 !important;
 }
+/* Fix badge-div inside case-group: inline-block collapses margins and breaks gaps.
+   Switching to block restores normal flow so case3→case4 margin works. */
+.case-group > div[style*="inline-block"] {
+  display: block !important;
+  letter-spacing: 0 !important;
+}
 /* Hide only the decorative gold line inside case-group */
 .case-group > div[style*="position:absolute"] {
   display: none !important;
+}
+/* stat labels: force explicit font so nothing inherits oddly */
+#case3 .cmetl, #case4 .cmetl {
+  font-family: "DM Sans", sans-serif !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
 }
 /* ── feature grid: 2-col desktop → 1-col mobile ── */
 .case-fg {
