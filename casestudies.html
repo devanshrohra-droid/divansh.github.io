@@ -457,9 +457,18 @@ h3.csect,
 .case-group > div[style*="inline-block"] {
   display: contents !important;
 }
+/* Direct selector for the gold badge div now that case-group is removed from HTML */
+div[style*="rgba(184,150,46,0.12)"][style*="inline-block"] {
+  display: contents !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
 /* Fallback for browsers without display:contents support */
 @supports not (display:contents) {
-  .case-group > div[style*="inline-block"] {
+  .case-group > div[style*="inline-block"],
+  div[style*="rgba(184,150,46,0.12)"][style*="inline-block"] {
     display: block !important;
     background: transparent !important;
     border: none !important;
@@ -658,8 +667,7 @@ h3.csect,
     </div>
   </div>
 
-  <div class="case-group" style="position:relative;background:transparent;border:none;padding:0;margin:0;box-shadow:none;border-radius:0;">
-    <div style="display:none;"></div>
+
     <div style="display:inline-block;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#B8962E;background:rgba(184,150,46,0.12);border:1px solid rgba(184,150,46,0.3);padding:5p        <div class="case reveal" id="case3">
     <div class="cbanner dark">
       <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:20px;">
